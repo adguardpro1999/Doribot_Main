@@ -30,7 +30,7 @@ async def on_ready():
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("Say ?Version #위드코로나")
+    game = discord.Game("Say ?명령어")
     await app.change_presence(status=discord.Status.online, activity=game)
     
     
