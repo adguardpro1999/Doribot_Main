@@ -643,6 +643,14 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")  
        
+    if "페미" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")  
+       
+    if "패미" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")       
+       
     if "장애" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")  
