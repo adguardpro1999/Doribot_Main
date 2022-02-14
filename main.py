@@ -131,7 +131,7 @@ async def on_message(message):
 
         
     if message.content.startswith("?Version") or message.content.startswith("?version"):        
-        msg = "{0.author.mention} 도리봇은 2022년 02월 03일에 2.0.1 버전으로 업데이트되었어요. 나머지 내용들은 DM을 확인해주세요. 도리봇이 DM을 보내지 않는다면, 한번 더 챗을 치세요.".format(message)
+        msg = "{0.author.mention} 도리봇은 2022년 02월 14일에 2.0.5 버전으로 업데이트되었어요. 나머지 내용들은 DM을 확인해주세요. 도리봇이 DM을 보내지 않는다면, 한번 더 챗을 치세요.".format(message)
         await message.channel.send( msg)
         await message.delete()
               
@@ -139,18 +139,28 @@ async def on_message(message):
     if message.content == "?Version" or message.content.startswith("?version"):
         if message.author.dm_channel:
             await message.author.dm_channel.send("###############################")
-            await message.author.dm_channel.send("제 버전은 2.0.1로 가장 최신버전이에요.")
-            await message.author.dm_channel.send("소스코드 70프로를 뜯어 고쳤고,") 
-            await message.author.dm_channel.send("프로젝트 파일 위치를 새로운 집으로 옮겼습니다. ")         
+            await message.author.dm_channel.send("제 버전은 2.0.5로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("도리봇이 이제 금칙어를 삭제하면") 
+            await message.author.dm_channel.send("출력되는 문구가 좀더 직관적으로 바뀌었습니다. ")  
+            await message.author.dm_channel.send("예를 들어 성 적인 비속어를 사용하면,") 
+            await message.author.dm_channel.send("xx님, 성 적인 단어를 사용하는 행위는 우리 서버를 어기는 것,") 
+            await message.author.dm_channel.send("이라는 뉘앙스로 문구가 출력될것입니다.") 
+            await message.author.dm_channel.send("이제, 디스코드 서버 멤버들은 도리봇의 경고 문구를 보고")    
+            await message.author.dm_channel.send("조금더 편하게 금칙어 필터링을 우회하는 방법을 찾을수 있을것입니다.") 
             await message.author.dm_channel.send("###############################")            
             await message.author.dm_channel.send("Would recommend to you.")
             await message.author.dm_channel.send("Say ?오늘의음식")
         elif message.author.dm_channel is None:
             channel = await message.author.create_dm()
             await message.author.dm_channel.send("###############################")
-            await message.author.dm_channel.send("제 버전은 2.0.1로 가장 최신버전이에요.")
-            await message.author.dm_channel.send("소스코드 70프로를 뜯어 고쳤고,") 
-            await message.author.dm_channel.send("프로젝트 파일 위치를 새로운 집으로 옮겼습니다. ")         
+            await message.author.dm_channel.send("제 버전은 2.0.5로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("도리봇이 이제 금칙어를 삭제하면") 
+            await message.author.dm_channel.send("출력되는 문구가 좀더 직관적으로 바뀌었습니다. ")  
+            await message.author.dm_channel.send("예를 들어 성 적인 비속어를 사용하면,") 
+            await message.author.dm_channel.send("xx님, 성 적인 단어를 사용하는 행위는 우리 서버를 어기는 것,") 
+            await message.author.dm_channel.send("이라는 뉘앙스로 문구가 출력될것입니다.") 
+            await message.author.dm_channel.send("이제, 디스코드 서버 멤버들은 도리봇의 경고 문구를 보고")    
+            await message.author.dm_channel.send("조금더 편하게 금칙어 필터링을 우회하는 방법을 찾을수 있을것입니다.")        
             await message.author.dm_channel.send("###############################")            
             await message.author.dm_channel.send("Would recommend to you.")
             await message.author.dm_channel.send("Say ?오늘의음식")  
@@ -190,7 +200,7 @@ async def on_message(message):
         await msg.edit(content="2021년 11월 1일부터 위드코로나가 실시됩니다. 대한민국조차 결국 코로나를 종식시키지 못하고 굴복하고 말았습니다. 중국의 기술력은 세계 제일이죠.")      
           
        
-    if message.content.startswith("오늘의운세"):       
+    if message.content.startswith("?오늘의운세"):       
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
