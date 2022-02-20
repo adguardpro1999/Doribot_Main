@@ -905,7 +905,7 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} 님, FN 프로젝트 90® PDWs는 벨기에의 FN사에서 만든 개인 방어 화기(PDW), 기관단총이죠. 본래 PDW 개념으로 출시되었지만 해당 개념이 사장된 최근에 와서는 그냥 기관단총으로 분류되며, 제조사도 미련없이 PDW 개념을 버리고 기관단총으로 판매하고 있습니다. 흔하지 않은 불펍 방식에, 특이한 탄창, 급탄 구조와 극단적인 간소화를 추구하여 탄생한 독특한 디자인으로 유명합니다. FPS 게임에서 빼놓을수 없는 친구죠.")        
 
     if "코로나" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 코로나19로 스트레스 받을 때 혼자 힘들어하지 말고 전문가의 도움을 받으세요.")   
+        await message.channel.send(f"{message.author.mention} 님, 코,로,나,1,9로 스트레스 받을 때 혼자 힘들어하지 말고 전문가의 도움을 받으세요.")   
       
     if message.content.startswith('코로나'):
          embed = discord.Embed(
