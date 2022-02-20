@@ -701,6 +701,70 @@ async def on_message(message):
     if "죽을" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 생명은 소중한 것입니다.")
       
+    if message.content.startswith('자살'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/euLvJBb.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)       
+      
+    if message.content.startswith('죽고'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/euLvJBb.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)     
+         
+    if message.content.startswith('죽여주'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/euLvJBb.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)     
+         
+    if message.content.startswith('죽을'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/euLvJBb.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)              
+   
+    if "자살" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 우울감 등 말하기 어려운 고민이 있거나 주변에 이런 어려움을 겪는 가족ㆍ지인이 있을 경우 자살예방 상담전화 1393, 정신건강 상담전화 1577-0199, 희망의 전화 129, 생명의 전화 1588-9191, 청소년 전화 1388, 청소년 모바일 상담 ‘다 들어줄게’ 앱, 카카오톡 등에서 24시간 전문가의 상담을 받을 수 있습니다.")
+      
+    if "죽고" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 우울감 등 말하기 어려운 고민이 있거나 주변에 이런 어려움을 겪는 가족ㆍ지인이 있을 경우 자살예방 상담전화 1393, 정신건강 상담전화 1577-0199, 희망의 전화 129, 생명의 전화 1588-9191, 청소년 전화 1388, 청소년 모바일 상담 ‘다 들어줄게’ 앱, 카카오톡 등에서 24시간 전문가의 상담을 받을 수 있습니다.")
+      
+    if "죽여주" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 우울감 등 말하기 어려운 고민이 있거나 주변에 이런 어려움을 겪는 가족ㆍ지인이 있을 경우 자살예방 상담전화 1393, 정신건강 상담전화 1577-0199, 희망의 전화 129, 생명의 전화 1588-9191, 청소년 전화 1388, 청소년 모바일 상담 ‘다 들어줄게’ 앱, 카카오톡 등에서 24시간 전문가의 상담을 받을 수 있습니다.")
+      
+    if "죽을" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 우울감 등 말하기 어려운 고민이 있거나 주변에 이런 어려움을 겪는 가족ㆍ지인이 있을 경우 자살예방 상담전화 1393, 정신건강 상담전화 1577-0199, 희망의 전화 129, 생명의 전화 1588-9191, 청소년 전화 1388, 청소년 모바일 상담 ‘다 들어줄게’ 앱, 카카오톡 등에서 24시간 전문가의 상담을 받을 수 있습니다.")      
+      
     if "완다" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 완,다 막시모프는 마블 시네마틱 유니버스의 스,칼,렛 위치입니다. 담당 배우는 엘리자베스 올슨이죠. 완,다는 그동안 인체 실험으로 능력을 얻었다고만 알고 있었으나, 완,다,비,전에서 밝혀진 완,다의 과거에 따르면 완,다는 태어날 때부터 능력을 지니고 태어났다가 마인드 스톤을 통해 각성한 것에 가깝다고 합니다.")      
       
@@ -839,7 +903,22 @@ async def on_message(message):
       
     if "피구공" in message.content:
         await message.channel.send(f"{message.author.mention} 님, FN 프로젝트 90® PDWs는 벨기에의 FN사에서 만든 개인 방어 화기(PDW), 기관단총이죠. 본래 PDW 개념으로 출시되었지만 해당 개념이 사장된 최근에 와서는 그냥 기관단총으로 분류되며, 제조사도 미련없이 PDW 개념을 버리고 기관단총으로 판매하고 있습니다. 흔하지 않은 불펍 방식에, 특이한 탄창, 급탄 구조와 극단적인 간소화를 추구하여 탄생한 독특한 디자인으로 유명합니다. FPS 게임에서 빼놓을수 없는 친구죠.")        
-         
+
+    if "코로나" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 코로나19로 스트레스 받을 때 혼자 힘들어하지 말고 전문가의 도움을 받으세요.")   
+      
+    if message.content.startswith('코로나'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/55Gap2t.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)           
            
     if message.content.startswith("ㅋ") or message.content.startswith("하하") or message.content.startswith("히히"):         
         dtime = datetime.datetime.now()
@@ -913,16 +992,16 @@ async def on_message(message):
 
      #2019년 발발한 COVID19 대응 파트 입니다. 2021년 04월 24일 현재도 국내 발생 760명 입니다. 
      #This is the COVID19 response part that broke out in 2019. As of April 24, 2021, the number of confirmed cases in South Korea was 760.
-    if message.content.startswith("사람") or message.content.startswith("인간") or message.content.startswith("사회적거리두기") or message.content.startswith("사회적 거리두기"):
+    if message.content.startswith("사람") or message.content.startswith("인간") or message.content.startswith("사회적거리두기") or message.content.startswith("사회적 거리두기") or message.content.startswith("코로나"):
         msg = await message.channel.send("#Stay at Home #사회적 거리두기")
         await asyncio.sleep(4.0)
-        await msg.edit(content="*코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
-        msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
+        await msg.edit(content="코,로,나가 드디어 종식되었어..라고 말하는 날이 올까요?")
+        msg2 = await message.channel.send("코,로,나가 끝날때까지 사회적 거리두기에 참여합시다.")
         await asyncio.sleep(5.0)
-        await msg2.edit(content="*아 오지요. 당연히 오지요. 올수밖에 없죠.")
-        msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
+        await msg2.edit(content="아 오지요. 당연히 오지요. 그날은 올수밖에 없죠.")
+        msg3 = await message.channel.send("힘들어도 참는자에게 복이 올거에요.")
         await asyncio.sleep(6.0)
-        await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
+        await msg3.edit(content="그렇죠, 그날은 올수밖에 없죠. 그런데 말이에요. 그때가되면은 우린 없을것 같아요.")
         await msg3.message.delete()        
 
 
