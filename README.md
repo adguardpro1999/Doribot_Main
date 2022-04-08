@@ -13,6 +13,9 @@
 대한민국도 소수자들이 주류가 되는 세상이 올까요?
 </pre>
 
+# ScreenShots
+
+
   
 # Website
   <a href="https://queenanna1999.github.io/DoriBotSite/"><img src="https://i.imgur.com/Ny6e2BS.jpeg" width=50 height=50></a> <--- Click!
