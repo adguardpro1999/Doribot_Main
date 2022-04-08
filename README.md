@@ -19,7 +19,7 @@
 <img src="https://github.com/queenanna1999/Doribot_Main/blob/main/ss/2.png?raw=true">
 <img src="https://github.com/queenanna1999/Doribot_Main/blob/main/ss/3.PNG?raw=true">
 <img src="https://github.com/queenanna1999/Doribot_Main/blob/main/ss/4.PNG?raw=true">
-
+</pre>
 
   
 # Website
