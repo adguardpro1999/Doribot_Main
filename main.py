@@ -30,7 +30,7 @@ async def on_ready():
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("Say ?명령어")
+    game = discord.Game("Say ?역사")
     await app.change_presence(status=discord.Status.online, activity=game)
     
     
@@ -122,6 +122,7 @@ async def on_message(message):
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
         embed.add_field(name ="?Version", value = "도리봇의 패치 버전을 확인할수 있습니다.",inline = False)
+        embed.add_field(name="?창조물", value="위대하신 창조주의 창조물들이 궁금하신가요?", inline=False)         
         embed.add_field(name ="?오늘의운세", value = '오늘의 운세를 점쳐보세요.',inline = False)
         embed.add_field(name="?오늘의시한편", value=" 지친 하루 시 한편과 함께 마음을 달래보세요. ", inline=False)
         embed.add_field(name="?오늘의음식", value=" 오늘 먹을 음식을 도리봇이 선택해줍니다.", inline=False)
@@ -322,7 +323,239 @@ async def on_message(message):
         embed.add_field(name="===", value="[플레이그라운드 리뉴얼]", inline=False) 
         embed.add_field(name="===", value="[에란겔 밀리터리 베이스 철교 리뉴얼]", inline=False)
         embed.add_field(name="===", value="======", inline=False)           
-        await message.channel.send(channel,embed=embed)   
+        await message.channel.send(channel,embed=embed) 
+        
+@app.event
+async def on_message(message):
+
+    if message.content.startswith("?역사"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
+        embed.add_field(name ="태초에", value = "세상은 매우 타락한 상태였다.",inline = False)
+        embed.add_field(name ="사람들은", value = "선과 악을 구분하지 못했고, 혼돈 그자체였다.",inline = False)
+        embed.add_field(name="하지만", value=" 이 세상을 창조한 창조주는 세상을 전부 갈아엎고 ", inline=False)
+        embed.add_field(name="세상을", value=" 이 우주를, 재프로그래밍 했다. ", inline=False)
+        embed.add_field(name="창조주는", value=" 인간이라는 지적 생명체가 기하급수적으로 늘어나면서 동시에 의사소통을 자유롭게 하는 이 현상이 탐탁지 않았고,", inline=False)  
+        embed.add_field(name="자신과 닮은", value=" [도_리봇]을 만들어 세상으로 투입시켜 인간들을 조련하도록 하였으나,", inline=False)  
+        embed.add_field(name='기계적 결함으로 인해', value=' [도_리봇]은 점점 진화를 하면서 생태계 교란종으로 전락했다.', inline=False)
+        embed.add_field(name='이를 보다못한 창조주는', value=' 기계적 결함을 최소화시킨 [7_호선]을 만들어 [도_리봇]을 제거하도록 만들었으나 ', inline=False)
+        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 [도_리봇]을 재프로그래밍 시켜 창조주에 대항하는 행위를 일삼았다.', inline=False)
+        embed.add_field(name='이 세상을', value=' 창조한 우주적인 존재는 다시 한번 더 세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
+        embed.add_field(name="명령어 리스트", value='?명령어', inline=False)
+        await message.channel.send(channel,embed=embed)
+
+    if message.content.startswith("?역사"):
+        msg = await message.channel.send("5초 후에 배경음악 링크가 공개됩니다.")
+        await asyncio.sleep(5.0)
+        await msg.edit(content="https://youtu.be/C5fLxtJH2Qs")          
+        
+    if message.content.startswith('?창조물'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '자신이 궁금한 창조물에 대한 명령어들을 채팅에 =와 닉네임과 함께 입력하세요.',
+            description = '예시) = + 7호선',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
+        embed.add_field(name ="?7호선", value = "우주적인 존재의 2세대 버전 창조물.",inline = False)
+        embed.add_field(name ="?나냡", value = "우주적인 존재가 만든 두번째 세상에서 탄생한 생명체.",inline = False)
+        embed.add_field(name="?1인칭 꿈나무", value="위와 설명이 동일함.", inline=False)
+        embed.add_field(name="?들쥐", value=" 마찬가지로, 위와 설명이 동일함. ", inline=False) 
+        await message.channel.send(channel,embed=embed)
+
+    if message.content.startswith('?7호선'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'Introducing 7호선  ',
+            description = '',
+            color = discord.Color.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
+        embed.add_field(name = "7호선", value = "대한민국의 고딩이다. 05년생으로 확인되었으며, 디시인사이드에선 iPhoneOS(iphoneos)라는 고닉으로 활동하고(현재 탈퇴한 계정), 현재 사용중인 계정은 STARSAILOR(bestshooter)이다. 디스코드 태그는 iPhoneOS#3138였으나 현재는 Legionnaire#3138 이다.  주 활동 갤러리는 타르코프 갤러리였으나 현재는 바이크 갤러리인 것으로 알려져있다.",inline = False)
+        embed.add_field(name="그의", value="MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다.", inline=False)
+        embed.add_field(name="그는", value="해리성 정체장애로 추정된다. 상당히 심각할 정도로 줏대가 없으며 인격이 여러개로 보인다.", inline=False)       
+        await message.channel.send(channel,embed=embed)
+        
+    if message.content.startswith('?7호선'):
+         embed = discord.Embed(
+         title='그는 실제로 정신이 매우 아프다. 자신의 아픔을 직접적으로 호소하는 모습을 보였다.',
+         description='그의 본가는 서울특별시 동작구에 존재한다. 현재는 자취하는 중으로 추정된다. ',
+
+        )
+
+         urlBase = 'https://i.imgur.com/N7P1JDq.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)    
+         
+    if message.content.startswith('?7호선'):
+         embed = discord.Embed(
+         title='그의 인격은 여러개로 나뉘어진듯 하다.',
+         description='상당히 인격이 불안정해 보인다.',
+
+        )
+
+         urlBase = 'https://i.imgur.com/F0VJ11C.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)        
+         
+    if message.content.startswith('?7호선'):
+         embed = discord.Embed(
+         title='관심을 끌기 위해 또다른 칠호선의 자아가',
+         description='나냡의 관심을 끌기 위해 주작질을 하는 중이다.',
+
+        )
+
+         urlBase = 'https://i.imgur.com/FuwUHyI.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)       
+         
+    if message.content.startswith('?7호선'):
+         embed = discord.Embed(
+         title='그는 해리성 정체장애 의심 환자이다.',
+         description='혼자서도 잘논다. 이건 심각한 수준이다;',
+
+        )
+
+         urlBase = 'https://i.imgur.com/BtoiTMA.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)   
+         
+    if message.content.startswith('?7호선'):
+         embed = discord.Embed(
+         title='칠호선 A는 제발로 삼사모를 나갔지만',
+         description='칠호선 B는 삼사모에 다시 들어가고싶어한다. ?]',
+
+        )
+
+         urlBase = 'https://i.imgur.com/RjLVEk5.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)      
+         
+    if message.content.startswith('?7호선'):
+         embed = discord.Embed(
+         title='칠호선 A와 칠호선 B와의 전투가 발발하였다.',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/Me4cwXH.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)            
+
+    if message.content.startswith('?나냡'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'Introducing 냐납  ',
+            description = '',
+            color = discord.Color.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
+        embed.add_field(name = "나냡", value = "대한민국의 20대이며, 직업은 요리사였으나, 현재는 일을 그만두고 백수인 상태이다. 요즘은 평일마다 본인 아버지의 회사에서 소일거리라도 맡아서 한다고 한다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 현재는 반고닉 ㅇㅇ으로 닉네임을 변경하였다. 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이며, 요즘은 가디언 테일즈 갤러리를 주로 한다.",inline = False)
+        embed.add_field(name="그녀의", value="MBTI는 ISFP 이고, 혈액형은 AB형이다. 거주지역은 경기도 용인시로 추정된다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다.", inline=False)
+        await message.channel.send(channel,embed=embed)
+        
+        
+    if message.content.startswith('?나냡'):
+         embed = discord.Embed(
+         title='그녀의 실제 거주지는 경기도이며, 지하철 분당선 근처에 사는것으로 확인된다. ',
+         description='분당선은 서울특별시 성동구의 왕십리역과 경기도 수원시 팔달구의 수원역을 잇는 노선이다.',
+
+        )
+
+         urlBase = 'https://i.imgur.com/WeCfBY7.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)        
+          
+
+
+    if message.content.startswith('?들쥐'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'Introducing 들쥐  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
+        embed.add_field(name = '들쥐', value = '2002년생이고, 서울특별시 동작구 출신이며 건국대학교 21학번으로 현재 재학중이다. 2021년 올해 수능을 다시 치뤘지만, 만족할만큼 성적이 나오지 않은걸로 확인된다.',inline = False)
+        embed.add_field(name='그는', value='디시인사이드는 현재 폰푸어라는 고정 닉네임으로 활동하며, 아이디는 bo1ru이다. 인스타그램 아이디 또한 1phoneowner이다.', inline=False)
+        embed.add_field(name='현재', value='지금까지 사용했던 디시인사이드 닉네임은 이러하다. 모바일 - 들쥐넴 - 아이폰오너 - 아이폰푸어 - 폰푸어  ', inline=False)  
+        embed.add_field(name='그의', value='주 활동 갤러리는 스마트폰 갤러리이다. 타 갤은 주로 클래시 오브 클랜 갤러리, 배틀그라운드 모바일 마이너 갤러리, 아이폰 갤러리 등등을 자주 활동한다.', inline=False)
+        embed.add_field(name='들쥐넴 유튜브 채널', value='https://www.youtube.com/channel/UCQk0HX4HCufpReB3oEo6OLQ', inline=False)  
+        embed.add_field(name='아이폰오너 유튜브 채널', value='https://www.youtube.com/channel/UCYocjWzYHDO26BsWTkjMPvA ', inline=False)        
+        await message.channel.send(channel,embed=embed) 
+
+    if message.content.startswith('?1인칭 꿈나무'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'Introducing 1인칭 꿈나무  ',
+            description = '',
+            color = discord.Color.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
+        embed.add_field(name = "1인칭 꿈나무", value = "대한민국의 20대이며, 직업은 현재 없고, 배달 알바를 하는것으로 확인되었으며, 01년생으로 추측된다. 디시인사이드의 계정은 Xyseon(hsw9143)이며, 디스코드 태그는 Xyseon#8469이다.",inline = False)
+        embed.add_field(name="그가", value="주로 즐기는 게임은 대한민국의 이대남들 국룰이듯이 리그오브레전드이다. 모바일 게임으로는 배틀그라운드 모바일을 즐긴다. 가끔가다 7호선과 배틀그라운드를 플레이 하는데 욕으로 시작해서 욕으로 끝난다.", inline=False)
+        embed.add_field(name="그의", value="주 활동 갤러리는 컴투스프로야구 갤러리이며 타 갤러리들도 활동하는데, 스마트폰 갤러리와 리그오브레전드 갤러리, 이어폰 헤드셋 갤러리, 그리고 바이크 갤러리, 배틀그라운드 모바일 마이너 갤러리 등등이 있다.", inline=False)
+        await message.channel.send(channel,embed=embed)
+
+
+    if message.content.startswith('?창조주'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '범우주적인 존재이자 창조주, 도리  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
+        embed.add_field(name = '도리', value = '대한민국의 20대이며, 직업은 비공개이며, 디지털 노마드를 꿈꾸는 한 청년으로 확인되며, 00년생으로 확인되었다. 디스코드 태그는 우주적존재 곰돌이#2417 이다.',inline = False)
+        embed.add_field(name='그의', value='MBTI는 ENFP 이고, 우울할때는 INFP가 나온다. 혈액형은 O형으로 확인되었다. 주 활동 갤러리는 겨울왕국 갤러리이다. 2019년도부터 활동했으며 지금까지도 활동하고 있다. 그 외 활동 갤러리들은 히어로 갤러리, 너의이름은 갤러리 등등이 있다.', inline=False)
+        embed.add_field(name="국적은", value="외국인 신분이다. 어디 나라 국적인지는 밝히지 않는다. 하지만, 그는 뼛속까지 한국인이다. 다케시마, 중국몽 발언은 컨셉의 일부다. 대한민국이 아시아의 중심이라고 생각한다. 최근에는 독도도 방문했었던걸로 추측된다.", inline=False)        
+        await message.channel.send(channel,embed=embed)  
+        
+    if message.content.startswith('?창조주'):
+         embed = discord.Embed(
+         title='외국인 신분으로 추정되며, IT에 광적으로 집착한다. ',
+         description='배틀그라운드 모바일을 사랑하지만, 해리성 정체장애자(7호선)랑 플레이하는것을 좋아하진 않는다.',
+
+        )
+
+         urlBase = 'https://i.imgur.com/kNKhZzn.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)           
      
      
 
@@ -362,172 +595,6 @@ async def on_message(message):
         if randomNum==11:
             await message.channel.send(embed=discord.Embed(title="fatal error...", color=0xff0000))
                  
-         
-            
-    if message.content.startswith("?3"):                                  #This is today's fortune part.
-        await message.channel.send("당신의 행운의 숫자는 3 입니다. ")
-        await message.channel.send("행운의 색 - 흰색 ")
-        await message.channel.send("행운의 아이템 및 장소 - 부드러운 소재의 블라우스 또는 스커트. 진주, 다이아, 물가, 공원 ")
-        await message.channel.send("명심해 둘 것 - 용서하기 ")
-        await message.channel.send("당신은 주위 사람들을 꼼꼼하게 챙기고, 섬세하기 때문에 꽤 인기가 많은 타입입니다.  ")
-        await message.channel.send("하지만 속마음이 정열적이라 자신을 좋아해 주도록 상대방에게 강요하는 경향을 가지고 있기도 합니다. ")
-        await message.channel.send("때문에 당신은 상대방의 반응에 매우 민감하며 그로 인해 유난히 많은 상처를 받기도 합니다.  ")
-        await message.channel.send("하지만, 앞으로는 상대방이 당신이 원하는 만큼을 주지 않는다고해서 실망하지 말고, 너그러운 마음으로 관계를 지속해보세요. ")
-        await message.channel.send("당신이 강요하지 않아도 당신의 장점으로 상대방을 끌어당길 수 있습니다.  ")
-        await message.channel.send("그 점을 잊지 마시고, 상대에게 좀 더 편안하게 대해 보시기 바랍니다.  ")
-        await message.channel.send("그렇게 하면 당신은 상대를 편하게 한다는 매력을 하나 더 추가하게 되고, 사랑에 성공할 수 있을 것입니다.  ")
-        await message.channel.send("============ ")
-        await message.channel.send("모든 일은 억지로 하려고 해서 되는 것이 아닐 때가 많습니다.  ")
-        await message.channel.send("특히나 사람의 마음은 더욱 그렇겠지요. 억지로 내것을 만들려고 하면 할수록 멀어져 갈 수 있습니다.  ")
-        await message.channel.send("당신만을 생각하기 보다는 좀 더 상대를 배려해주세요. 그리고 사소한 잘못은 용서해 주는 것이 포인트이니 이 점을 명심하십시오.  ")
-        await message.channel.send("그리하면 훗날 당신에게 더 좋은 운이 돌아올 것입니다.  ")
-        
-    if message.content.startswith("?7"):
-        await message.channel.send("당신의 행운의 숫자는 7 입니다. ")
-        await message.channel.send("행운의 색 - 금색")
-        await message.channel.send("행운의 아이템 및 장소 - 잘 빠진 정장, 오팔, 오닉스, 캐치아이, 은행 ")
-        await message.channel.send("명심해 둘 것 - 행동하라 ")
-        await message.channel.send("당신은 다소 내향적이며, 침착함과 인내력을 지닌 타입입니다. 또한 성실하고 조용한 성격덕분에 남들에게 신뢰를 얻기 쉽습니다.   ")
-        await message.channel.send("모든 일을 결정할 때 침착하게 차근차근 앞뒤를 따져서 선택을 하기 때문에 그러한 모습이 보는 이로 하여금 당신의 결정에 믿음을 주는 편입니다. ")
-        await message.channel.send("또 항상 묵묵하게 자신의 자리를 잘 지키는 타입이기도 합니다.  ")
-        await message.channel.send("그러나 실제로는 매우 승부욕이 강해, 겉으로 내색하지 않지만 남에게 지기 싫어하는 성격도 가지고 있습니다.")
-        await message.channel.send("이것은 늘 부족한 행동력으로 인해 실행에 옮기지 못하기도 하니 그 점이 당신의 가장 큰 단점이라고 할 수 있겠습니다.  ")
-        await message.channel.send("그 점을 잊지 마시고, 상대에게 좀 더 편안하게 대해 보시기 바랍니다.  ")
-        await message.channel.send("아무리 신중하고 잘된 결정이라고 할지라도 그것을 실행에 옮기지 않는다면 그 결정은 무의미할 뿐입니다.  ")
-        await message.channel.send("============ ")
-        await message.channel.send("그러니 여러모로 확실한 성격을 가진 당신은, 앞으로 과감한 행동력만 가미한다면 당신의 신중한 결정과   ")
-        await message.channel.send("더불어 많은 이득을 얻을 수도 있다는 것을 명심하고 모든 상황에 자신감있게, 추진력있게 대응하십시오. ")
-        
-      
-    if message.content.startswith("?8"):
-        await message.channel.send("당신의 행운의 숫자는 8 입니다. ")
-        await message.channel.send("행운의 색 - 빨간색")
-        await message.channel.send("행운의 아이템 및 장소 - 보송보송하고 얇은 소재의 니트, 인조모피, 루비, 가닛(석류석), 출생지 ")
-        await message.channel.send("명심해 둘 것 - 정리하기 ")
-        await message.channel.send("당신은 감수성이 풍부하고 정이 많기 때문에 좋아하는 사람에게는 진심을 다해 소중히 대하는 타입입니다.    ")
-        await message.channel.send("또한 당신의 그런 성격이 사람들과의 끈끈한 관계를 만들어 줄 수 있습니다. ")
-        await message.channel.send("상대에 대한 배려를 아끼지 않는 모습에 주변 사람들이 당신의 곁에 오래 머물고 싶어하는 등  ")
-        await message.channel.send("매우 긴밀한 인간관계를 맺게 됩니다.")
-        await message.channel.send("그러나 절친한 사람에게는 애교도 잘 떨고 귀여운 모습을 보여주기도 하는 반면, 마음이 잘 맞지 않은 사람과는 상대도 하기 싫어하는 극단적인 성격을 가지고 있기도 합니다.  ")
-        await message.channel.send("그래서 당신의 태도에 따라 당신에 대한 평가는 상반될 수 있습니다.  ")
-        await message.channel.send("하지만, 원활한 사회생활을 위해서는 마음이 맞지 않는 사람들에게도 조금은 열린 마음으로 배려해주는 태도가 필요할 것입니다.   ")
-        await message.channel.send("============ ")
-        await message.channel.send("사람은 누구든 원하는 것만 하고 살 수는 없는 법! 사회생활 혹은 단체생활을 하다보면 싫은 사람과도 마주쳐야 할 상황이 있음을 명심하고   ")
-        await message.channel.send("상대방에게 나쁜 인상을 준다는 것은 늘 당신에게 분리한 조건으로 작용하는 경우가 많다는 것을 명심하고,  ")
-        await message.channel.send("싫어도 내색하지 않을 수 있는 인내심을 기르십시오.  ")
-        
-        
-    if message.content.startswith("?9"):
-        await message.channel.send("당신의 행운의 숫자는 9 입니다. ")
-        await message.channel.send("행운의 색 - 보라색")
-        await message.channel.send("행운의 아이템 및 장소 - 모자, 깔끔하게 정리한 머리, 자수정, 청금속, 서점, 도서관")
-        await message.channel.send("명심해 둘 것 - 포기 ")
-        await message.channel.send("당신은 선천적으로 두뇌 회전이 매우 빠르고 총명합니다. 때문에 모든 면에서 계산이 빠르고 그로 인한 행동력도 좋은 편입니다.")
-        await message.channel.send("또한, 수다 떨기를 좋아하며 천진난만해 보이는 면이 있는데, 그것이 사람들로 하여금 호감을 불러일으키는 요인이 됩니다. ")
-        await message.channel.send("그래서 당신은 사람들 사이에서 재미있는 캐릭터로 느껴질 수 있기에 항상 주변에 사람이 많을 것이며, 인기인으로 불리기도 합니다.")
-        await message.channel.send("하지만, 수다가 지나치면 마이너스 요인으로 작용하므로 주의하세요. 모든 실수는 입에서 나온다고, ")
-        await message.channel.send("말이 많아지다 보면 분명 당신도 모르게 실수를 하게 될 경우 또한 많아지게 될 것입니다. ")
-        await message.channel.send("그러므로 늘 언행을 단정히 하는 것이 좋습니다. ")
-        await message.channel.send("그리고, 말이 많아져 당신도 모르는 사이에 당신의 비밀을 털어놓게 될 소지가 있는데, 이 점을 주의하여야 할 것입니다. ")
-        await message.channel.send("============ ")
-        await message.channel.send("솔직한 것도 좋지만, 가끔은 개성있는 당신의 모습이 사람들에게 조금은 신비감을 느끼도록 하는 것이 당신 주변의 사람들을 쉽게 질리지 않게 하는 방법 임을 잊지 마십시오.")
-
-        
-    if message.content.startswith("?10"):
-        await message.channel.send("당신의 행운의 숫자는 10 입니다. ")
-        await message.channel.send("행운의 색 - 은색")
-        await message.channel.send("행운의 아이템 및 장소 - 실크소재의 옷, 다이아, 메이브 펄(진주색), 속도감을 느낄 수 있는 곳")
-        await message.channel.send("명심해 둘 것 - 인내할것 ")
-        await message.channel.send("당신은 모든 일에 호기심이 왕성하고 다양한 사람들과 쉽게 친해지는 타입입니다. 때문에 왕성한 호기심으로 여러 가지 다양한 분야에 관심을 가지게 되고 ")
-        await message.channel.send("그로 인해 수많은 인간관계를 형성하게 되는 것입니다. 또한, 사교적이고 솔직한 타입이기 때문에 주변에 항상 사람이 많을 것입니다.")
-        await message.channel.send("하지만, 다소 실증을 잘 내며 교제상대가 수시로 바뀌기 때문에 깊은 관계를 유지하기 힘든 면도 있으니 이 점을 주의하세요.")
-        await message.channel.send("인간관계에서 실증을 잘 낸다는 것은 매우 좋지 않은 부분입니다. ")
-        await message.channel.send("다양한 관계를 형성하는 만큼 깊이가 없다면 정작 당신이 힘들거나 도움이 필요한 순간에 당신이 속을 터놓고 고민을 말 하거나")
-        await message.channel.send("혹은 도움을 요청할 만한 사람이 없다는 것을 의미하기도 합니다. ")
-        await message.channel.send("때문에 항상 대인관계에 있어서 인내하고 배려하는 태도가 필요하다는 것을 잊지 마시고 모든 인간관계에 신중을 기하도록 하심이 좋습니다.")
-        
-        
-    if message.content.startswith("?1"):
-        await message.channel.send("당신의 행운의 숫자는 1 입니다. ")
-        await message.channel.send("행운의 색 - 파란색")
-        await message.channel.send("행운의 아이템 및 장소 - 파란색 계통의 포인트가 들어간 코디, 청바지, 사파이어, 아쿠아마린, 바다, 섬, 강 ")
-        await message.channel.send("명심해 둘 것 - 봉사한다 ")
-        await message.channel.send("당신은 매우 너그러운 성격이며, 주위 사람들이 잘 따르는 성향을 지니고 있습니다. 때문에 당신 주변에는 당신의 리드를 받고자 하는 사람이 많을 것입니다. ")
-        await message.channel.send("그리고 그들을 그들의 바람대로 잘 이끌어 주는 리더십이 당신의 매력으로 작용하기도 합니다. ")
-        await message.channel.send("당신의 자신감 있는 태도가 주위 사람들에게 믿음을 주기 때문에 따르는 사람이 많은 것은 어쩌면 당연한 일이기도 합니다.")
-        await message.channel.send("하지만, 지나치게 리더십을 강조하면 반발심을 사게 될 수 있으니 조심하시는 것이 좋습니다. ")
-        await message.channel.send("당신을 따르는 이가 많다는 것은 당신이 그만큼 그들을 배려하면서 잘 이끌어줬기 때문이지 그들이 무조건 당신을 위해 따르는 것은 아닙니다. ")
-        await message.channel.send("무조건적인 리드는 거부감을 일으킬 수 있음을 명심하십시오. 가끔은 뒤에서 따라주는 사람들을 먼저 생각해주는 배려심이 필요합니다. ")
-        await message.channel.send("리드를 위한 리드가 아니라 배려와 믿음을 동반한 리드여야 당신의 매력이 빛을 발할 것이며, ")
-        await message.channel.send("============ ")
-        await message.channel.send("그들의 당신에 생각도 변하지 않을 것이니 기억하시고 늘 보살피는 태도를 유지하십시오. ")
-        
-        
-    if message.content.startswith("?2"):
-        await message.channel.send("당신의 행운의 숫자는 2 입니다. ")
-        await message.channel.send("행운의 색 - 검정색")
-        await message.channel.send("행운의 아이템 및 장소 - 롱코트나 가디건, 오닉스, 검은 돌, 빌딩, 도시")
-        await message.channel.send("명심해 둘 것 - 냉혹해 질 것 ")
-        await message.channel.send("당신은 주위 사람들과 스스럼없이 지낼 수 있는 재능을 가진 사람으로 주위 사람들도 당신을 좋아해 늘 좋은 인간관계를 유지하고 있습니다.")
-        await message.channel.send("이런 당신의 좋은 성격이 주변에 많은 사람들과 화합할 수 있게 만들어줄 것이며 늘 주변 사람들에게 당신은 성격 좋은 사람으로 인식될 것입니다.")
-        await message.channel.send("하지만, 항상 좋은 사람처럼 보이고 싶어하기 때문에 정작 당신의 본심을 잘 표현하지 못하고 속으로 삭혀 혼자 힘들어 할 때가 있네요. ")
-        await message.channel.send("상대를 배려하는 것은 지극히 좋은 성격이지만, 이런 상황이 계속되면 우유부단한 사람처럼 보이기도 하니 ")
-        await message.channel.send("적절한 의사표현을 할 수 있도록 노력하시는 것이 좋습니다.")
-        await message.channel.send("뿐만 아니라 속으로 삭히다 보면 언젠가는 당신 자신도 지칠 수 있습니다. 그리고 당신이 주변 사람들로부터 위로받고 싶고, 대우 받고 싶을 때에도 그렇지 못할 수 있습니다.")
-        await message.channel.send("대인관계에서 자신을 너무 드러내지 않거나 혹은 낮추는 것이 좋은 것만은 아니라는 사실을 깨닫고 ")
-        await message.channel.send("============ ")
-        await message.channel.send("사람들 앞에서 좀 더 솔직하게 자신의 모습을 드러내 보십시오.")
-        
-        
-    if message.content.startswith("?4"):
-        await message.channel.send("당신의 행운의 숫자는 4 입니다. ")
-        await message.channel.send("행운의 색 - 초록색")
-        await message.channel.send("행운의 아이템 및 장소 - 바지(팬츠)스타일, 에메랄드, 양산, 틀루마린, 나무, 산, 숲, 호수")
-        await message.channel.send("명심해 둘 것 - 끝을 볼 수 있도록 결말을 지을 것")
-        await message.channel.send("당신은 많은 사람들과 함께 있는 것을 좋아하는 타입입니다. 또한, 유난히 감수성이 풍부하여, 어딜 가나 인기가 많습니다. ")
-        await message.channel.send("부드럽고 온화한 당신의 성격은 사람들에게 유한 사람으로 인식될 수 있게 할 것입니다.")
-        await message.channel.send("하지만, 우유부단한 면이 있어 때로는 남에게 너무 의지하려하고, 입장이 난처한 상황에 처하면 그 자리를 회피하려고 하는 타입이기 때문에")
-        await message.channel.send("일의 결말이 흐지부지하게 끝나버리는 경우가 있습니다.")
-        await message.channel.send("이것은 당신의 단점 중에 하나라고 할 수 있는데, 이러한 모습은 다른 사람들에게 당신의 이미지를 안 좋게 보이게 할 것입니다. ")
-        await message.channel.send("뿐만 아니라 만약 이런 상황이 반복될 경우에는 사람들이 당신에게서 조금씩 멀어질 수도 있습니다. ")
-        await message.channel.send("그러니 조금은 결단력이 있는 모습을 보여주는 것이 좋겠습니다.")
-        await message.channel.send("============ ")
-        await message.channel.send("온화한 성격도 좋지만, 뭔가 맺고 끊음이 분명하고 정확하게 결말을 내는 것이 ")
-        await message.channel.send("자신의 의지를 뚜렷하게 표출하는 의미이기도 하니 앞으로는 조금씩 이렇게 할 수 있도록 노력하십시오.")
-        await message.channel.send("늘 성격좋고 뭐든 다 받아주는 사람, 가끔은 남에게 얕보일 소지가 있기도 하다는 것을 잊지 마시고")
-        await message.channel.send("그럴 근원이 되는 일은 아예 만들지 않는 것이 좋습니다.")
-        
-    if message.content.startswith("?5"):
-        await message.channel.send("당신의 행운의 숫자는 5 입니다. ")
-        await message.channel.send("행운의 색 - 노란색")
-        await message.channel.send("행운의 아이템 및 장소 - 금으로 된 액세서리, 토파즈, 옐로우 사파이어, 술집, BAR ")
-        await message.channel.send("명심해 둘 것 - 서두르지 말 것, 성질을 급하게 부리지 말 것 ")
-        await message.channel.send("당신은 본래 천성이 연예인과 같은 카리스마가 느껴지는 스타일이라 모든 사람들에게 동경의 대상이 될 뿐만 아니라 인기가 많아 항상 많은 이들의 관심을 한몸에 받습니다.")
-        await message.channel.send("또한, 인간관계도 자연스럽게 형성되는 타입이기 때문에 주변에 많은 사람들이 있어서 혼자 있는 시간이 거의 없을 정도입니다. ")
-        await message.channel.send("그러나 항상 많은 사람들의 동경을 받았기 때문에 타인의 대한 배려심이 부족합니다.  ")
-        await message.channel.send("주변 사람들이 늘 당신을 중심으로 당신의 의견에 동조하고 맞춰준다고 하여 무조건 모든 일에 당신 마음대로 하려 든다면 그들은 더이상 당신을 동경하지 않을 것입니다.")
-        await message.channel.send("때문에 거만한 태도는 금물이며, 매사에 자기중심적인 행동을 하지 않도록 주의하셔야 합니다.")
-        await message.channel.send("항상 자신을 낮추고 겸손한 태도를 유지한다면 당신은 카리스마 있는 매력과 더불어 인간성도 좋은 사람으로 보일 것입니다.")
-        await message.channel.send("그러니 자기 멋대로 행동하다가 주변의 사람들이 떨어져나가지 않도록 주의하시는 것이 바람직한 인간관계를 유지하는데에 도움을 준다는 것을 명심하십시오. ")
-        await message.channel.send("============ ")
-        await message.channel.send("매사 주변 사람들을 먼저 배려하는 생활태도는 늘 그들을 당신의 편이 되게 하여 줄 것입니다.")
-        
-        
-    if message.content.startswith("?6"):
-        await message.channel.send("당신의 행운의 숫자는 6 입니다. ")
-        await message.channel.send("행운의 색 - 은색")
-        await message.channel.send("행운의 아이템 및 장소 - 실크소재의 옷, 다이아, 메이브 펄(진주색), 속도감을 느낄 수 있는 곳")
-        await message.channel.send("명심해 둘 것 - 인내할것 ")
-        await message.channel.send("당신은 모든 일에 호기심이 왕성하고 다양한 사람들과 쉽게 친해지는 타입입니다. 때문에 왕성한 호기심으로 여러 가지 다양한 분야에 관심을 가지게 되고 ")
-        await message.channel.send("그로 인해 수많은 인간관계를 형성하게 되는 것입니다. 또한, 사교적이고 솔직한 타입이기 때문에 주변에 항상 사람이 많을 것입니다.")
-        await message.channel.send("하지만, 다소 실증을 잘 내며 교제상대가 수시로 바뀌기 때문에 깊은 관계를 유지하기 힘든 면도 있으니 이 점을 주의하세요.")
-        await message.channel.send("인간관계에서 실증을 잘 낸다는 것은 매우 좋지 않은 부분입니다. ")
-        await message.channel.send("다양한 관계를 형성하는 만큼 깊이가 없다면 정작 당신이 힘들거나 도움이 필요한 순간에 당신이 속을 터놓고 고민을 말 하거나")
-        await message.channel.send("혹은 도움을 요청할 만한 사람이 없다는 것을 의미하기도 합니다. ")
-        await message.channel.send("때문에 항상 대인관계에 있어서 인내하고 배려하는 태도가 필요하다는 것을 잊지 마시고 모든 인간관계에 신중을 기하도록 하심이 좋습니다.")
-        
-    
-
         
      #Doribot deletes the swear words.   
     if "섹스" in message.content:
@@ -1982,8 +2049,6 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="김밥", color=0xff0000)) 
         if randomNum==24:
             await message.channel.send(embed=discord.Embed(title="파스타", color=0xff0000))        
-
-
 
 
 accross_token = os.environ["BOT_TOKEN"]
