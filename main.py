@@ -45,7 +45,8 @@ async def on_message_delete(message):
     embed.set_footer(text=f"{message.guild.name} | {time}")
     await channel.send(embed=embed)
 
-
+@app.event
+async def on_message(message):
 
 
     if message.content.startswith("=명령어"):
