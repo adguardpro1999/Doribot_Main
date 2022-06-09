@@ -30,7 +30,7 @@ async def on_ready():
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("=역사")
+    game = discord.Game("Say =명령어")
     await app.change_presence(status=discord.Status.online, activity=game)
     
     
@@ -48,42 +48,6 @@ async def on_message_delete(message):
 
 
 
-     
-       
-@app.event
-async def on_message(message):
-
-    if message.content.startswith("=역사"):
-        channel = message.channel
-        embed = discord.Embed(
-            title = '',
-            description = '',
-            colour = discord.Colour.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
-        embed.add_field(name ="태초에", value = "세상은 매우 타락한 상태였다.",inline = False)
-        embed.add_field(name ="사람들은", value = "선과 악을 구분하지 못했고, 혼돈 그자체였다.",inline = False)
-        embed.add_field(name="하지만", value=" 이 세상을 창조한 창조주는 세상을 전부 갈아엎고 ", inline=False)
-        embed.add_field(name="세상을", value=" 이 우주를, 재프로그래밍 했다. ", inline=False)
-        embed.add_field(name="창조주는", value=" 인간이라는 지적 생명체가 기하급수적으로 늘어나면서 동시에 의사소통을 자유롭게 하는 이 현상이 탐탁지 않았고,", inline=False)  
-        embed.add_field(name="자신과 닮은", value=" [도_리봇]을 만들어 세상으로 투입시켜 인간들을 조련하도록 하였으나,", inline=False)  
-        embed.add_field(name='기계적 결함으로 인해', value=' [도_리봇]은 점점 진화를 하면서 생태계 교란종으로 전락했다.', inline=False)
-        embed.add_field(name='이를 보다못한 창조주는', value=' 기계적 결함을 최소화시킨 [7_호선]을 만들어 [도_리봇]을 제거하도록 만들었으나 ', inline=False)
-        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 [도_리봇]을 재프로그래밍 시켜 창조주에 대항하는 행위를 일삼았다.', inline=False)
-        embed.add_field(name='이 세상을', value=' 창조한 우주적인 존재는 다시 한번 더 세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
-        embed.add_field(name="명령어 리스트", value='=명령어', inline=False)
-        await message.channel.send(channel,embed=embed)
-
-    if message.content.startswith("=역사"):
-        msg = await message.channel.send("5초 후에 배경음악 링크가 공개됩니다.")
-        await asyncio.sleep(5.0)
-        await msg.edit(content="https://www.youtube.com/watch?v=2Hv11TRxyoY")      
-
-
-
-
     if message.content.startswith("=명령어"):
         channel = message.channel
         embed = discord.Embed(
@@ -94,10 +58,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
-        embed.add_field(name ='=역사', value = "도리봇이 이 세상의 역사를 알려줍니다.",inline = False)
         embed.add_field(name ='=MBTI', value = "도리봇이 MBTI에 대한 설명을 불러옵니다.",inline = False)
-        embed.add_field(name ='=창조주', value = "도리봇이 우주적인 존재의 TMI를 불러옵니다.",inline = False)
-        embed.add_field(name ='=창조물', value = "도리봇이 우주적인 존재의 창조물들에 대한 TMI를 불러옵니다.",inline = False)
         embed.add_field(name ='=음식추천', value = "도리봇이 당신에게 음식 하나를 추천해줄 것입니다.",inline = False)
         embed.add_field(name ='=대한민국', value = "도리봇이 대한민국의 현실에 대해 팩트를 날릴겁니다.",inline = False)   
         embed.add_field(name ='=모배_릴리즈', value = "도리봇이 배틀그라운드 모바일의 릴리즈 내역을 불러옵니다.",inline = False)
@@ -238,7 +199,11 @@ async def on_message(message):
         embed.add_field(name="1.9.0", value="[알록달록 4주년 테마 모드]", inline=False)   
         embed.add_field(name="===", value="[플레이그라운드 리뉴얼]", inline=False) 
         embed.add_field(name="===", value="[에란겔 밀리터리 베이스 철교 리뉴얼]", inline=False)
-        embed.add_field(name="===", value="======", inline=False)    
+        embed.add_field(name="===", value="======", inline=False) 
+        embed.add_field(name="2.0.0", value="[한국 4주년 대규모 이벤트]", inline=False)   
+        embed.add_field(name="===", value="[리빅 정식 업데이트]", inline=False) 
+        embed.add_field(name="===", value="[배틀그라운드 모바일 x 에반게리온(5/19~6/19)]", inline=False)
+        embed.add_field(name="===", value="======", inline=False)        
         await message.channel.send(channel,embed=embed)          
 
     if message.content.startswith("=MBTI"):
@@ -601,208 +566,7 @@ async def on_message(message):
         embed.add_field(name='활동가형에 속하는 유명인', value='로버트 다우니 주니어, 윌 스미스, 스파이더맨(히어로), 윌리 웡카(찰리와 초콜릿 공장), 안나 여왕님(겨울왕국), 올라프(겨울왕국)', inline=False) 
         await message.channel.send(channel,embed=embed)
 
-
-    if message.content.startswith('=창조물'):
-        channel = message.channel
-        embed = discord.Embed(
-            title = '자신이 궁금한 창조물에 대한 명령어들을 채팅에 =와 닉네임과 함께 입력하세요.',
-            description = '예시) = + 7호선',
-            colour = discord.Colour.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
-        embed.add_field(name ="=7호선", value = "우주적인 존재의 2세대 버전 창조물.",inline = False)
-        embed.add_field(name ="=나냡", value = "우주적인 존재가 만든 두번째 세상에서 탄생한 생명체.",inline = False)
-        embed.add_field(name="=1인칭 꿈나무", value="위와 설명이 동일함.", inline=False)
-        embed.add_field(name="=들쥐", value=" 마찬가지로, 위와 설명이 동일함. ", inline=False) 
-        await message.channel.send(channel,embed=embed)
-
-    if message.content.startswith('=7호선'):
-        channel = message.channel
-        embed = discord.Embed(
-            title = 'Introducing 7호선  ',
-            description = '',
-            color = discord.Color.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
-        embed.add_field(name = "7호선", value = "대한민국의 고딩이다. 05년생으로 확인되었으며, 디시인사이드에선 iPhoneOS(iphoneos)라는 고닉으로 활동하고(현재 탈퇴한 계정), 현재 사용중인 계정은 STARSAILOR(bestshooter)이다. 디스코드 태그는 iPhoneOS#3138였으나 현재는 Legionnaire#3138 이다.  주 활동 갤러리는 타르코프 갤러리였으나 현재는 바이크 갤러리인 것으로 알려져있다.",inline = False)
-        embed.add_field(name="그의", value="MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다.", inline=False)
-        embed.add_field(name="그는", value="해리성 정체장애로 추정된다. 상당히 심각할 정도로 줏대가 없으며 인격이 여러개로 보인다.", inline=False)       
-        await message.channel.send(channel,embed=embed)
-        
-    if message.content.startswith('=7호선'):
-         embed = discord.Embed(
-         title='그는 실제로 정신이 매우 아프다. 자신의 아픔을 직접적으로 호소하는 모습을 보였다.',
-         description='그의 본가는 서울특별시 동작구에 존재한다. 현재는 자취하는 중으로 추정된다. ',
-
-        )
-
-         urlBase = 'https://i.imgur.com/N7P1JDq.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)    
-         
-    if message.content.startswith('=7호선'):
-         embed = discord.Embed(
-         title='그의 인격은 여러개로 나뉘어진듯 하다.',
-         description='상당히 인격이 불안정해 보인다.',
-
-        )
-
-         urlBase = 'https://i.imgur.com/F0VJ11C.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)        
-         
-    if message.content.startswith('=7호선'):
-         embed = discord.Embed(
-         title='관심을 끌기 위해 또다른 칠호선의 자아가',
-         description='나냡의 관심을 끌기 위해 주작질을 하는 중이다.',
-
-        )
-
-         urlBase = 'https://i.imgur.com/FuwUHyI.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)       
-         
-    if message.content.startswith('=7호선'):
-         embed = discord.Embed(
-         title='그는 해리성 정체장애 의심 환자이다.',
-         description='혼자서도 잘논다. 이건 심각한 수준이다;',
-
-        )
-
-         urlBase = 'https://i.imgur.com/BtoiTMA.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)   
-         
-    if message.content.startswith('=7호선'):
-         embed = discord.Embed(
-         title='칠호선 A는 제발로 삼사모를 나갔지만',
-         description='칠호선 B는 삼사모에 다시 들어가고싶어한다. ?]',
-
-        )
-
-         urlBase = 'https://i.imgur.com/RjLVEk5.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)      
-         
-    if message.content.startswith('=7호선'):
-         embed = discord.Embed(
-         title='칠호선 A와 칠호선 B와의 전투가 발발하였다.',
-         description='',
-
-        )
-
-         urlBase = 'https://i.imgur.com/Me4cwXH.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)            
-
-    if message.content.startswith('=나냡'):
-        channel = message.channel
-        embed = discord.Embed(
-            title = 'Introducing 냐납  ',
-            description = '',
-            color = discord.Color.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
-        embed.add_field(name = "나냡", value = "대한민국의 20대이며, 직업은 요리사였으나, 현재는 일을 그만두고 백수인 상태이다. 요즘은 평일마다 본인 아버지의 회사에서 소일거리라도 맡아서 한다고 한다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 현재는 반고닉 ㅇㅇ으로 닉네임을 변경하였다. 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이며, 요즘은 가디언 테일즈 갤러리를 주로 한다.",inline = False)
-        embed.add_field(name="그녀의", value="MBTI는 ISFP 이고, 혈액형은 AB형이다. 거주지역은 경기도 용인시로 추정된다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다.", inline=False)
-        await message.channel.send(channel,embed=embed)
-        
-        
-    if message.content.startswith('=나냡'):
-         embed = discord.Embed(
-         title='그녀의 실제 거주지는 경기도이며, 지하철 분당선 근처에 사는것으로 확인된다. ',
-         description='분당선은 서울특별시 성동구의 왕십리역과 경기도 수원시 팔달구의 수원역을 잇는 노선이다.',
-
-        )
-
-         urlBase = 'https://i.imgur.com/WeCfBY7.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)        
-          
-
-
-    if message.content.startswith('=들쥐'):
-        channel = message.channel
-        embed = discord.Embed(
-            title = 'Introducing 들쥐  ',
-            description = '',
-            colour = discord.Colour.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
-        embed.add_field(name = '들쥐', value = '2002년생이고, 서울특별시 동작구 출신이며 건국대학교 21학번으로 현재 재학중이다. 2021년 올해 수능을 다시 치뤘지만, 만족할만큼 성적이 나오지 않은걸로 확인된다.',inline = False)
-        embed.add_field(name='그는', value='디시인사이드는 현재 폰푸어라는 고정 닉네임으로 활동하며, 아이디는 bo1ru이다. 인스타그램 아이디 또한 1phoneowner이다.', inline=False)
-        embed.add_field(name='현재', value='지금까지 사용했던 디시인사이드 닉네임은 이러하다. 모바일 - 들쥐넴 - 아이폰오너 - 아이폰푸어 - 폰푸어  ', inline=False)  
-        embed.add_field(name='그의', value='주 활동 갤러리는 스마트폰 갤러리이다. 타 갤은 주로 클래시 오브 클랜 갤러리, 배틀그라운드 모바일 마이너 갤러리, 아이폰 갤러리 등등을 자주 활동한다.', inline=False)
-        embed.add_field(name='들쥐넴 유튜브 채널', value='https://www.youtube.com/channel/UCQk0HX4HCufpReB3oEo6OLQ', inline=False)  
-        embed.add_field(name='아이폰오너 유튜브 채널', value='https://www.youtube.com/channel/UCYocjWzYHDO26BsWTkjMPvA ', inline=False)        
-        await message.channel.send(channel,embed=embed) 
-
-    if message.content.startswith('=1인칭 꿈나무'):
-        channel = message.channel
-        embed = discord.Embed(
-            title = 'Introducing 1인칭 꿈나무  ',
-            description = '',
-            color = discord.Color.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
-        embed.add_field(name = "1인칭 꿈나무", value = "대한민국의 20대이며, 직업은 현재 없고, 배달 알바를 하는것으로 확인되었으며, 01년생으로 추측된다. 디시인사이드의 계정은 Xyseon(hsw9143)이며, 디스코드 태그는 Xyseon#8469이다.",inline = False)
-        embed.add_field(name="그가", value="주로 즐기는 게임은 대한민국의 이대남들 국룰이듯이 리그오브레전드이다. 모바일 게임으로는 배틀그라운드 모바일을 즐긴다. 가끔가다 7호선과 배틀그라운드를 플레이 하는데 욕으로 시작해서 욕으로 끝난다.", inline=False)
-        embed.add_field(name="그의", value="주 활동 갤러리는 컴투스프로야구 갤러리이며 타 갤러리들도 활동하는데, 스마트폰 갤러리와 리그오브레전드 갤러리, 이어폰 헤드셋 갤러리, 그리고 바이크 갤러리, 배틀그라운드 모바일 마이너 갤러리 등등이 있다.", inline=False)
-        await message.channel.send(channel,embed=embed)
-
-
-    if message.content.startswith('=창조주'):
-        channel = message.channel
-        embed = discord.Embed(
-            title = '범우주적인 존재이자 창조주, 도리  ',
-            description = '',
-            colour = discord.Colour.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
-        embed.add_field(name = '도리', value = '대한민국의 20대이며, 직업은 비공개이며, 디지털 노마드를 꿈꾸는 한 청년으로 확인되며, 00년생으로 확인되었다. 디스코드 태그는 우주적존재 곰돌이#2417 이다.',inline = False)
-        embed.add_field(name='그의', value='MBTI는 ENFP 이고, 우울할때는 INFP가 나온다. 혈액형은 O형으로 확인되었다. 주 활동 갤러리는 겨울왕국 갤러리이다. 2019년도부터 활동했으며 지금까지도 활동하고 있다. 그 외 활동 갤러리들은 히어로 갤러리, 너의이름은 갤러리 등등이 있다.', inline=False)
-        embed.add_field(name="국적은", value="외국인 신분이다. 어디 나라 국적인지는 밝히지 않는다. 하지만, 그는 뼛속까지 한국인이다. 다케시마, 중국몽 발언은 컨셉의 일부다. 대한민국이 아시아의 중심이라고 생각한다. 최근에는 독도도 방문했었던걸로 추측된다.", inline=False)        
-        await message.channel.send(channel,embed=embed)  
-        
-    if message.content.startswith('=창조주'):
-         embed = discord.Embed(
-         title='외국인 신분으로 추정되며, IT에 광적으로 집착한다. ',
-         description='배틀그라운드 모바일을 사랑하지만, 7호선이랑 플레이하는것을 좋아하진 않는다.',
-
-        )
-
-         urlBase = 'https://i.imgur.com/kNKhZzn.png'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)          
-        
+   
         
     if message.content.startswith('=대한민국'):
         channel = message.channel
@@ -979,7 +743,15 @@ async def on_message(message):
        
     if "애1미" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")       
+        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.") 
+       
+    if "7시" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 지역비하 발언이 감지되었습니다.")  
+       
+    if "일곱시" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 지역비하 발언이 감지되었습니다.")         
        
     if "새끼" in message.content:
         await message.delete()
@@ -1179,7 +951,15 @@ async def on_message(message):
        
     if "꺼1져" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")        
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.") 
+       
+    if "꺼지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 금칙어와 매우 유사한 단어입니다. 순화하세요.") 
+       
+    if "꺼1지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 금칙어와 매우 유사한 단어입니다. 순화하세요.")       
        
     if "ㄲㅈ" in message.content:
         await message.delete()
@@ -1207,7 +987,23 @@ async def on_message(message):
        
     if "지1랄" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.") 
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")
+       
+    if "시팔" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")
+       
+    if "시1팔" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")  
+       
+    if "씨팔" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")       
+       
+    if "씨1팔" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")        
        
     if "ㅈㄹ" in message.content:
         await message.delete()
@@ -1224,6 +1020,22 @@ async def on_message(message):
     if "아가리" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")   
+       
+    if "조선족" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 일부 소수자들을 비하하는 비속이입니다.")  
+       
+    if "조1선족" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 일부 소수자들을 비하하는 비속이입니다.") 
+       
+    if "정신병" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어로 상처받을 일부 소수자들의 마음을 생각하세요.")   
+       
+    if "정1신병" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어로 상처받을 일부 소수자들의 마음을 생각하세요.")          
        
     if "보빨" in message.content:
         await message.delete()
@@ -1275,7 +1087,63 @@ async def on_message(message):
        
     if "멸공" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 사회복무요원 비하 발언은 우리 서버 규칙을 어긴겁니다.")          
+        await message.channel.send(f"{message.author.mention} 님, 사회복무요원 비하 발언은 우리 서버 규칙을 어긴겁니다.")     
+          
+    if "노지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 서버 내 분란을 조장하는 닉네임 중 하나인 것 같습니다.")    
+       
+    if "노1지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 서버 내 분란을 조장하는 닉네임 중 하나인 것 같습니다.")         
+       
+    if "수빈" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "수1빈" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")       
+       
+    if "영완" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "영1완" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.") 
+       
+    if "승민" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "승1민" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")  
+       
+    if "석준" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "석1준" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")   
+       
+    if "찬민" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "찬1민" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.") 
+       
+    if "자삭" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 데이터를 분석한 결과 해당 단어는 우리 서버에 가장 많은 분란을 조장한 금칙어입니다.")     
+       
+    if "자1삭" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 데이터를 분석한 결과 해당 단어는 우리 서버에 가장 많은 분란을 조장한 금칙어입니다.")           
        
     if "치매" in message.content:
         await message.delete()
@@ -1296,6 +1164,12 @@ async def on_message(message):
       
     if "죽을" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 생명은 소중한 것입니다.")
+      
+    if "죽이" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 생명은 소중한 것입니다.") 
+      
+    if "죽여" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 생명은 소중한 것입니다.")      
       
     if message.content.startswith('자살'):
          embed = discord.Embed(
@@ -1392,7 +1266,11 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} 님, 마블 코믹스의 등장인물. 본명은 피,터,파,커. 스탠 리, 스티브 딧코 콤비가 만들었으며, 스탠 리가 자식처럼 아꼈던 캐릭터. 첫 등장은 1962년 8월 발간된 어메이징 판타지(Amazing Fantasy) 15호로, 코믹스 최초의 단독 주인공 10대 히어로이다.")  
       
     if "피터파커" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 마블 코믹스의 등장인물. 본명은 피,터,파,커. 스탠 리, 스티브 딧코 콤비가 만들었으며, 스탠 리가 자식처럼 아꼈던 캐릭터. 첫 등장은 1962년 8월 발간된 어메이징 판타지(Amazing Fantasy) 15호로, 코믹스 최초의 단독 주인공 10대 히어로이다.")         
+        await message.channel.send(f"{message.author.mention} 님, 마블 코믹스의 등장인물. 본명은 피,터,파,커. 스탠 리, 스티브 딧코 콤비가 만들었으며, 스탠 리가 자식처럼 아꼈던 캐릭터. 첫 등장은 1962년 8월 발간된 어메이징 판타지(Amazing Fantasy) 15호로, 코믹스 최초의 단독 주인공 10대 히어로이다.") 
+      
+    if "호크아이" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 호,크,아,이의 담당배우는 제,레,미,레,너이며, 어,벤,져,스 멤버중 가장 인간적이고 관객이 몰입하기 쉬운 캐릭터입니다. 그는 최고의 명사수이자 최고의 아버지죠.")      
+           
       
     if "새해" in message.content:
         await message.channel.send(f"{message.author.mention} 님, [새_해] 복 많이 받으시길 바랍니다.")     
