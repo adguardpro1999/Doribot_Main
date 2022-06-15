@@ -1138,6 +1138,22 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.") 
        
+    if "강지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "강1지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")   
+       
+    if "개지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
+       
+    if "개1지" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")        
+       
     if "자삭" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 데이터를 분석한 결과 해당 단어는 우리 서버에 가장 많은 분란을 조장한 금칙어입니다.")     
@@ -1270,7 +1286,19 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} 님, 마블 코믹스의 등장인물. 본명은 피,터,파,커. 스탠 리, 스티브 딧코 콤비가 만들었으며, 스탠 리가 자식처럼 아꼈던 캐릭터. 첫 등장은 1962년 8월 발간된 어메이징 판타지(Amazing Fantasy) 15호로, 코믹스 최초의 단독 주인공 10대 히어로이다.") 
       
     if "호크아이" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 호,크,아,이의 담당배우는 제,레,미,레,너이며, 어,벤,져,스 멤버중 가장 인간적이고 관객이 몰입하기 쉬운 캐릭터입니다. 그는 최고의 명사수이자 최고의 아버지죠.")      
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 호,크,아,이의 담당배우는 제,레,미,레,너이며, 어,벤,져,스 멤버중 가장 인간적이고 관객이 몰입하기 쉬운 캐릭터입니다. 그는 최고의 명사수이자 최고의 아버지죠.")    
+      
+    if "차베즈" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 차,베,즈는 원작인 마,블,코,믹,스에 등장하는 캐릭터로 코드네임은 미스 아,메,리,카이며 본명은 아,메,리,카,차,베,즈이죠, 담당 배우는 소,치,틀,고,메,즈입니다.")  
+      
+    if "소치틀" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 차,베,즈는 원작인 마,블,코,믹,스에 등장하는 캐릭터로 코드네임은 미스 아,메,리,카이며 본명은 아,메,리,카,차,베,즈이죠, 담당 배우는 소,치,틀,고,메,즈입니다.")        
+      
+    if "미즈마블" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 미,즈,마,블은 마,블 최초의 성,공,한,덕,후 히어로 입니다. 본명은 카,말,라 칸이며 무,슬,림 출신 히어로이죠. 카,말,라 칸은 어벤져스 멤버들을 덕질하는게 취미죠. 그녀의 조상은 크리족입니다. 우연찮게 증조할머니의 유품을 차게된 그녀는 결국 자신 몸안에 잠재되어있던 능력을 발현시키죠. 담당 배우는 이,만,벨,라,니입니다.")   
+      
+    if "이만벨라니" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 미,즈,마,블은 마,블 최초의 성,공,한,덕,후 히어로 입니다. 본명은 카,말,라 칸이며 무,슬,림 출신 히어로이죠. 카,말,라 칸은 어벤져스 멤버들을 덕질하는게 취미죠. 그녀의 조상은 크리족입니다. 우연찮게 증조할머니의 유품을 차게된 그녀는 결국 자신 몸안에 잠재되어있던 능력을 발현시키죠. 담당 배우는 이,만,벨,라,니입니다.")        
            
       
     if "새해" in message.content:
@@ -1303,6 +1331,10 @@ async def on_message(message):
     if "news.v.daum.net" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+       
+    if ".jpg" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 사진 공유는 서버 규칙을 어긴겁니다.(베타)")       
        
     if "나냡" in message.content:
         await message.delete()
