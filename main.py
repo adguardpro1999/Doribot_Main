@@ -1331,10 +1331,7 @@ async def on_message(message):
     if "news.v.daum.net" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
-       
-    if ".jpg" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 사진 공유는 서버 규칙을 어긴겁니다.(베타)")       
+           
        
     if "나냡" in message.content:
         await message.delete()
