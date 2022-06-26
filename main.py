@@ -744,15 +744,8 @@ async def on_message(message):
        
     if "애1미" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.") 
+        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")        
        
-    if "7시" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 지역비하 발언이 감지되었습니다.")  
-       
-    if "일곱시" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 지역비하 발언이 감지되었습니다.")         
        
     if "새끼" in message.content:
         await message.delete()
@@ -880,11 +873,8 @@ async def on_message(message):
        
     if "애1비" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")        
-       
-    if "씹" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 사용한 단어는 성 적인 단어로, 우리 서버 규칙을 어기는 행위죠.")
+        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")              
+
        
     if "느금" in message.content:
         await message.delete()
@@ -904,15 +894,8 @@ async def on_message(message):
        
     if "ㅗ" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")
-       
-    if "봊" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 사용한 단어는 여성의 생,식,기를 의미하는 비속어로, 우리 서버 규칙을 어기는 행위죠.")
-       
-    if "좆" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 사용한 단어는 남성의 성,기를 의미하는 비속어로, 우리 서버 규칙을 어기는 행위죠.")
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")       
+
        
     if "존나" in message.content:
         await message.delete()
@@ -972,16 +955,8 @@ async def on_message(message):
               
     if "ㅄ" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 남들과 다른 존재를 비하하는 단어를 사용하지마세요.")  
-       
-    if "노무" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.")        
-       
-    if "노1무" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.")        
-       
+        await message.channel.send(f"{message.author.mention} 님, 남들과 다른 존재를 비하하는 단어를 사용하지마세요.")         
+             
     if "지랄" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.") 
@@ -1018,9 +993,6 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")  
        
-    if "아가리" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")   
        
     if "조선족" in message.content:
         await message.delete()
@@ -1036,27 +1008,8 @@ async def on_message(message):
        
     if "정1신병" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 단어로 상처받을 일부 소수자들의 마음을 생각하세요.")          
-       
-    if "보빨" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.") 
-       
-    if "보1빨" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.")        
-       
-    if "물소" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.")           
-       
-    if "이기" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 메,갈에서 파생된 단어를 사용하지 마세요.")  
-       
-    if "이1기" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 메,갈에서 파생된 단어를 사용하지 마세요.")        
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어로 상처받을 일부 소수자들의 마음을 생각하세요.")                          
+           
        
     if "피싸개" in message.content:
         await message.delete()
@@ -1070,9 +1023,17 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 해당 단어는 젠,더,갈,등 관련 단어입니다, 사용하지마세요.")  
        
+    if "페1미" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 젠,더,갈,등 관련 단어입니다, 사용하지마세요.")         
+       
     if "패미" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 해당 단어는 젠,더,갈,등 관련 단어입니다, 사용하지마세요.")
+       
+    if "패1미" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 젠,더,갈,등 관련 단어입니다, 사용하지마세요.")         
        
     if "장애" in message.content:
         await message.delete()
@@ -1084,84 +1045,12 @@ async def on_message(message):
        
     if "정공" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 사회복무요원 비하 발언은 우리 서버 규칙을 어긴겁니다.")     
+        await message.channel.send(f"{message.author.mention} 님, 사회복무요원 비하 발언은 우리 서버 규칙을 어긴겁니다.")   
        
-    if "멸공" in message.content:
+    if "정1공" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 사회복무요원 비하 발언은 우리 서버 규칙을 어긴겁니다.")     
-          
-    if "노지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 서버 내 분란을 조장하는 닉네임 중 하나인 것 같습니다.")    
-       
-    if "노1지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 서버 내 분란을 조장하는 닉네임 중 하나인 것 같습니다.")         
-       
-    if "수빈" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "수1빈" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")       
-       
-    if "영완" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "영1완" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.") 
-       
-    if "승민" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "승1민" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")  
-       
-    if "석준" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "석1준" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")   
-       
-    if "찬민" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "찬1민" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.") 
-       
-    if "강지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "강1지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")   
-       
-    if "개지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")    
-       
-    if "개1지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 이름은 서버 내 분란을 조장하는 이름 중 하나인 것 같습니다.")        
-       
-    if "자삭" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 데이터를 분석한 결과 해당 단어는 우리 서버에 가장 많은 분란을 조장한 금칙어입니다.")     
-       
-    if "자1삭" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 데이터를 분석한 결과 해당 단어는 우리 서버에 가장 많은 분란을 조장한 금칙어입니다.")           
-       
+        await message.channel.send(f"{message.author.mention} 님, 사회복무요원 비하 발언은 우리 서버 규칙을 어긴겁니다.")        
+                                                                    
     if "치매" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 해당 질병은 누구나 걸릴 수 있습니다. 함부로 그런 단어를 사용하지마세요. 천벌 받을것입니다.")    
