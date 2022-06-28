@@ -744,8 +744,7 @@ async def on_message(message):
        
     if "애1미" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")        
-       
+        await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")               
        
     if "새끼" in message.content:
         await message.delete()
@@ -874,7 +873,6 @@ async def on_message(message):
     if "애1비" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 부,모 또는 가,족을 비하하는 욕설을 사용하지 마세요.")              
-
        
     if "느금" in message.content:
         await message.delete()
@@ -979,7 +977,11 @@ async def on_message(message):
        
     if "씨1팔" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")        
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")     
+       
+    if "좆" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")                       
        
     if "ㅈㄹ" in message.content:
         await message.delete()
@@ -993,6 +995,21 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")  
        
+    if "짱깨" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.") 
+       
+    if "짱1깨" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")       
+       
+    if "씨1팔" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")           
+       
+    if "씨1팔" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")           
        
     if "조선족" in message.content:
         await message.delete()
@@ -1008,8 +1025,7 @@ async def on_message(message):
        
     if "정1신병" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 단어로 상처받을 일부 소수자들의 마음을 생각하세요.")                          
-           
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어로 상처받을 일부 소수자들의 마음을 생각하세요.")                                     
        
     if "피싸개" in message.content:
         await message.delete()
