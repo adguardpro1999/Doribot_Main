@@ -1376,6 +1376,15 @@ async def on_message(message):
 
     if "top gun" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 탑,건은 1986년에 개봉한 미국 영화, 현 386세대의 일원이라면 한번쯤은 영화관에서 본 그 추억의 영화죠. 후속작은 36년만에 개봉을 하였습니다.")   
+
+    if "모배" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 배,틀,그,라,운,드,모,바,일은 텐,센,트의 배,틀,그,라,운,드,의 모,바,일버전 입니다. 2018년 05월 16일 국내에 출시하였죠.")  
+ 
+    if "모바일배그" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 배,틀,그,라,운,드,모,바,일은 텐,센,트의 배,틀,그,라,운,드,의 모,바,일버전 입니다. 2018년 05월 16일 국내에 출시하였죠.")  
+
+    if "배그" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 배,틀,그,라,운,드,모,바,일은 텐,센,트의 배,틀,그,라,운,드,의 모,바,일버전 입니다. 2018년 05월 16일 국내에 출시하였죠.")  
       
     if message.content.startswith('코로나'):
          embed = discord.Embed(
