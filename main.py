@@ -49,7 +49,7 @@ async def on_message_delete(message):
 async def on_message(message):
 
 
-    if message.content.startswith("=버전"):
+    if message.content.startswith("=명령어"):
         channel = message.channel
         embed = discord.Embed(
             title = '명령어 리스트',
@@ -75,7 +75,7 @@ async def on_message(message):
         await message.delete()
               
         
-    if message.content == "?Version":
+    if message.content == "=버전":
         if message.author.dm_channel:
             await message.author.dm_channel.send("###############################")
             await message.author.dm_channel.send("제 버전은 2.2.0으로 가장 최신버전이에요.")
