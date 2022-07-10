@@ -30,7 +30,7 @@ async def on_ready():
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("Say =명령어")
+    game = discord.Game("=명령어")
     await app.change_presence(status=discord.Status.online, activity=game)
     
     
@@ -59,15 +59,18 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
-        embed.add_field(name ='=MBTI', value = "도리봇이 MBTI에 대한 설명을 불러옵니다.",inline = False)
-        embed.add_field(name ='=음식추천', value = "도리봇이 당신에게 음식 하나를 추천해줄 것입니다.",inline = False)
-        embed.add_field(name ='=대한민국', value = "도리봇이 대한민국의 현실에 대해 팩트를 날릴겁니다.",inline = False)   
-        embed.add_field(name ='=모배_릴리즈', value = "도리봇이 배틀그라운드 모바일의 릴리즈 내역을 불러옵니다.",inline = False)
-        embed.add_field(name ='=게임허락', value = "도리봇에게 게임 허락을 받아보세요, 봇이 게임을 플레이 하는것을 허락하지 않는다면 그날은 게임 안 돌리는겁니다?",inline = False)
+        embed.add_field(name ='=Version', value = "도리봇의 패치 버전을 확인할수 있습니다.",inline = False)
+        embed.add_field(name ='=오늘의운세', value = "오늘의 운세를 점쳐보세요.",inline = False)
+        embed.add_field(name ='=오늘의시한편', value = "지친 하루 시 한편과 함께 마음을 달래보세요.",inline = False)   
+        embed.add_field(name ='=오늘의음식', value = "오늘 먹을 음식을 도리봇이 선택해줍니다.",inline = False)
+        embed.add_field(name ='=모배_패치노트', value = "MBTI에 대한 정보가 궁금하세요?",inline = False)
+        embed.add_field(name ='=MBTI', value = "MBTI에 대한 정보가 궁금하세요?",inline = False)
+        embed.add_field(name ='=대한민국', value = "할말은 한다! 도카콜라!",inline = False)  
+        embed.add_field(name ='=게임허락', value = "도리봇이 오늘 게임을 해도 되는 날인지 점을 쳐줄것입니다.",inline = False)  
         await message.channel.send(channel,embed=embed)
 
   
-    if message.content.startswith('=모배_릴리즈'):
+    if message.content.startswith('=모배_패치노트'):
         channel = message.channel
         embed = discord.Embed(
             title = '배틀그라운드 모바일의 업데이트 내역입니다.  ',
@@ -104,7 +107,7 @@ async def on_message(message):
         embed.add_field(name="===", value="퀵 보이스 한국어 버전 신규 추가", inline=False)
         await message.channel.send(channel,embed=embed)  
 
-    if message.content.startswith('=모배_릴리즈'):
+    if message.content.startswith('=모배_패치노트'):
         channel = message.channel
         embed = discord.Embed(
             title = '배틀그라운드 모바일의 업데이트 내역입니다.  ',
@@ -140,7 +143,7 @@ async def on_message(message):
         embed.add_field(name="===", value="더욱 유니크한 Royale Pass 시즌 13 (5/13)", inline=False) 
         await message.channel.send(channel,embed=embed)
 
-    if message.content.startswith('=모배_릴리즈'):
+    if message.content.startswith('=모배_패치노트'):
         channel = message.channel
         embed = discord.Embed(
             title = '배틀그라운드 모바일의 업데이트 내역입니다.  ',
@@ -179,7 +182,7 @@ async def on_message(message):
         embed.add_field(name="===", value="[배틀그라운드 모바일x프로미스나인]", inline=False)
         await message.channel.send(channel,embed=embed)
 
-    if message.content.startswith('=모배_릴리즈'):
+    if message.content.startswith('=모배_패치노트'):
         channel = message.channel
         embed = discord.Embed(
             title = '배틀그라운드 모바일의 업데이트 내역입니다.  ',
@@ -640,7 +643,7 @@ async def on_message(message):
           
 
 
-    if message.content.startswith('=음식추천'):       
+    if message.content.startswith('=오늘의음식'):       
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
@@ -756,11 +759,11 @@ async def on_message(message):
        
     if "십년" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 여,성 혐,오적인 단어 입니다.")     
        
     if "씹" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")      
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 여,성의 생,식,기를 비하하는 단어죠.")      
        
     if "난교" in message.content:
         await message.delete()
@@ -901,7 +904,6 @@ async def on_message(message):
     if "ㅗ" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")       
-
        
     if "존나" in message.content:
         await message.delete()
@@ -989,11 +991,7 @@ async def on_message(message):
        
     if "좆" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")    
-       
-    if "씹" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")                
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성적인 단어입니다.")                       
        
     if "ㅈㄹ" in message.content:
         await message.delete()
@@ -1009,11 +1007,11 @@ async def on_message(message):
        
     if "짱깨" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.") 
+        await message.channel.send(f"{message.author.mention} 님, 중,국,인들을 비하하지 마세요.") 
        
     if "짱1깨" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")       
+        await message.channel.send(f"{message.author.mention} 님, 중,국,인들을 비하하지 마세요.")       
        
     if "씨1팔" in message.content:
         await message.delete()
@@ -1025,11 +1023,11 @@ async def on_message(message):
        
     if "조선족" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 일부 소수자들을 비하하는 비속이입니다.")  
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 일부 소수민족들을 비하하는 비속이입니다.")  
        
     if "조1선족" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 일부 소수자들을 비하하는 비속이입니다.") 
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 일부 소수민족들을 비하하는 비속이입니다.") 
        
     if "정신병" in message.content:
         await message.delete()
@@ -1215,8 +1213,7 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 미,즈,마,블은 마,블 최초의 성,공,한,덕,후 히어로 입니다. 본명은 카,말,라 칸이며 무,슬,림 출신 히어로이죠. 카,말,라 칸은 어벤져스 멤버들을 덕질하는게 취미죠. 그녀의 조상은 크리족입니다. 우연찮게 증조할머니의 유품을 차게된 그녀는 결국 자신 몸안에 잠재되어있던 능력을 발현시키죠. 담당 배우는 이,만,벨,라,니입니다.")   
       
     if "이만벨라니" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 미,즈,마,블은 마,블 최초의 성,공,한,덕,후 히어로 입니다. 본명은 카,말,라 칸이며 무,슬,림 출신 히어로이죠. 카,말,라 칸은 어벤져스 멤버들을 덕질하는게 취미죠. 그녀의 조상은 크리족입니다. 우연찮게 증조할머니의 유품을 차게된 그녀는 결국 자신 몸안에 잠재되어있던 능력을 발현시키죠. 담당 배우는 이,만,벨,라,니입니다.")        
-           
+        await message.channel.send(f"{message.author.mention} 님, 마블 시네마틱 유니버스의 미,즈,마,블은 마,블 최초의 성,공,한,덕,후 히어로 입니다. 본명은 카,말,라 칸이며 무,슬,림 출신 히어로이죠. 카,말,라 칸은 어벤져스 멤버들을 덕질하는게 취미죠. 그녀의 조상은 크리족입니다. 우연찮게 증조할머니의 유품을 차게된 그녀는 결국 자신 몸안에 잠재되어있던 능력을 발현시키죠. 담당 배우는 이,만,벨,라,니입니다.")                   
       
     if "새해" in message.content:
         await message.channel.send(f"{message.author.mention} 님, [새_해] 복 많이 받으시길 바랍니다.")     
@@ -1247,48 +1244,7 @@ async def on_message(message):
       
     if "news.v.daum.net" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
-           
-       
-    if "나냡" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 서버 규칙을 어기는겁니다.") 
-       
-    if "나1냡" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 서버 규칙을 어기는겁니다.")      
-       
-    if "남냠" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 서버 규칙을 어기는겁니다.")        
-                    
-    if "도리" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 서버 규칙을 어기는겁니다.") 
-       
-    if "도1리" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 서버 규칙을 어기는겁니다.")   
-       
-    if "돌이" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 서버 규칙을 어기는겁니다.") 
-       
-    if "광탈맨" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 분쟁 유발 목적이 다분해보입니다.")        
-                     
-    if "7호선" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 사회 하층민 신분의 닉네임은 언급해도 괜찮습니다. ")  
-       
-    if "들쥐" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 상민 신분의 닉네임은 언급해도 괜찮습니다. ")   
-      
-    if "1인칭" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 노예 신분의 닉네임은 언급해도 괜찮습니다. ")   
-      
-    if "그로자" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 해당 총기는 러시아제 총기로, Гроза. 천둥번개라는 뜻을 가지고 있죠.") 
+        await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")                                                   
       
     if "Groza" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 배그 기준으로 설명하자면 해당 총기는 러시아제 불펍 자동소총으로, 천둥번개, 뇌우라는 의미를 가졌죠.(Образец ЦКИБ-14) '그에 비빌 자, 먼지처럼 분해되어 사라지리니' ")  
@@ -1378,13 +1334,13 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} 님, 탑,건은 1986년에 개봉한 미국 영화, 현 386세대의 일원이라면 한번쯤은 영화관에서 본 그 추억의 영화죠. 후속작은 36년만에 개봉을 하였습니다.")   
 
     if "모배" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 배,틀,그,라,운,드,모,바,일은 텐,센,트의 배,틀,그,라,운,드,의 모,바,일버전 입니다. 2018년 05월 16일 국내에 출시하였죠.")  
+        await message.channel.send(f"{message.author.mention} 님, 모,바,일,배,그는 2018년 05월 16일 국내에 출시한 글로벌 매출 1위 게임입니다.")  
  
     if "모바일배그" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 배,틀,그,라,운,드,모,바,일은 텐,센,트의 배,틀,그,라,운,드,의 모,바,일버전 입니다. 2018년 05월 16일 국내에 출시하였죠.")  
+        await message.channel.send(f"{message.author.mention} 님, 모,바,일,배,그는 2018년 05월 16일 국내에 출시한 글로벌 매출 1위 게임입니다.")  
 
     if "배그" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 배,틀,그,라,운,드,모,바,일은 텐,센,트의 배,틀,그,라,운,드,의 모,바,일버전 입니다. 2018년 05월 16일 국내에 출시하였죠.")  
+        await message.channel.send(f"{message.author.mention} 님, 모,바,일,배,그는 2018년 05월 16일 국내에 출시한 글로벌 매출 1위 게임입니다.")  
       
     if message.content.startswith('코로나'):
          embed = discord.Embed(
