@@ -49,7 +49,7 @@ async def on_message_delete(message):
 async def on_message(message):
 
 
-    if message.content.startswith("=명령어"):
+    if message.content.startswith("=버전"):
         channel = message.channel
         embed = discord.Embed(
             title = '명령어 리스트',
@@ -59,7 +59,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
-        embed.add_field(name ='=Version', value = "도리봇의 패치 버전을 확인할수 있습니다.",inline = False)
+        embed.add_field(name ='=버전', value = "도리봇의 패치 버전을 확인할수 있습니다.",inline = False)
         embed.add_field(name ='=오늘의운세', value = "오늘의 운세를 점쳐보세요.",inline = False)
         embed.add_field(name ='=오늘의시한편', value = "지친 하루 시 한편과 함께 마음을 달래보세요.",inline = False)   
         embed.add_field(name ='=오늘의음식', value = "오늘 먹을 음식을 도리봇이 선택해줍니다.",inline = False)
@@ -69,6 +69,35 @@ async def on_message(message):
         embed.add_field(name ='=게임허락', value = "도리봇이 오늘 게임을 해도 되는 날인지 점을 쳐줄것입니다.",inline = False)  
         await message.channel.send(channel,embed=embed)
 
+    if message.content.startswith("=버전"):        
+        msg = "{0.author.mention} 도리봇은 2022년 07월 10일에 2.2.0 버전으로 업데이트되었어요. 나머지 내용들은 DM을 확인해주세요. 도리봇이 DM을 보내지 않는다면, 한번 더 챗을 치세요.".format(message)
+        await message.channel.send( msg)
+        await message.delete()
+              
+        
+    if message.content == "?Version":
+        if message.author.dm_channel:
+            await message.author.dm_channel.send("###############################")
+            await message.author.dm_channel.send("제 버전은 2.2.0으로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("도리봇의 금칙어 기능이 대폭 개선됩니다.") 
+            await message.author.dm_channel.send("또한, 명령어 리스트 UI도 개선되었어요. ")  
+            await message.author.dm_channel.send("추가로 랜덤 시 한편 추천 기능과") 
+            await message.author.dm_channel.send("음식 추천 기능 UI가 개선되었습니다.") 
+            await message.author.dm_channel.send("###############################")            
+            await message.author.dm_channel.send("Would recommend to you.")
+            await message.author.dm_channel.send("Say =명령어")
+        elif message.author.dm_channel is None:
+            channel = await message.author.create_dm()
+            await message.author.dm_channel.send("###############################")
+            await message.author.dm_channel.send("제 버전은 2.2.0으로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("도리봇의 금칙어 기능이 대폭 개선됩니다.") 
+            await message.author.dm_channel.send("또한, 명령어 리스트 UI도 개선되었어요. ")  
+            await message.author.dm_channel.send("추가로 랜덤 시 한편 추천 기능과") 
+            await message.author.dm_channel.send("음식 추천 기능 UI가 개선되었습니다.") 
+            await message.author.dm_channel.send("###############################")            
+            await message.author.dm_channel.send("Would recommend to you.")
+            await message.author.dm_channel.send("Say =명령어")
+            
   
     if message.content.startswith('=모배_패치노트'):
         channel = message.channel
