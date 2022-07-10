@@ -606,10 +606,25 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)          
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith("ㅋ") or message.content.startswith("하하") or message.content.startswith("크크") or message.content.startswith("히히") or message.content.startswith("호호") or message.content.startswith("ㅎㅎ"): 
 
+        emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
+                 " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
+                 " ( •́ ̯•̀ ) ",
+                 " •̀.̫•́✧ ", " '͡•_'͡• ", " (΄◞ิ౪◟ิ‵) ", " ˵¯͒ བ¯͒˵ ", " ͡° ͜ʖ ͡° ", " ͡~ ͜ʖ ͡° ", " (づ｡◕‿‿◕｡)づ ",
+                 " ´_ゝ` ", " ٩(͡◕_͡◕ ", " ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ ", " ٩(͡ï_͡ï☂ ", " ௐ ", " (´･ʖ̫･`) ", " ε⌯(ง ˙ω˙)ว ",
+                 " (っ˘ڡ˘ς) ", "●▅▇█▇▆▅▄▇", "  ╋╋◀", "︻╦̵̵̿╤──", "ー═┻┳︻▄", "︻╦̵̵͇̿̿̿̿══╤─",
+                 " ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ", "∑◙█▇▆▅▄▃▂", " ♋♉♋ ", " (๑╹ω╹๑) ", " (╯°□°）╯︵ ┻━┻ ",
+                 " (///▽///) ", " σ(oдolll) ", " 【o´ﾟ□ﾟ`o】 ", " ＼(^o^)／ ", " (◕‿‿◕｡) ", " ･ᴥ･ ", " ꈍ﹃ꈍ "
+                                                                                                 " ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ",
+                 " ( ◍•㉦•◍ ) ", " (｡ì_í｡) ", " (╭•̀ﮧ •́╮) ", " ଘ(੭*ˊᵕˋ)੭ ", " ´_ゝ` ", " (~˘▾˘)~ "] 
 
-        
+        randomNum = random.randrange(0, len(emoji)) 
+        print("랜덤수 값 :" + str(randomNum))
+        print(emoji[randomNum])
+        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))                   
         
     if message.content.startswith("ㅋ") or message.content.startswith("하하") or message.content.startswith("크크") or message.content.startswith("히히") or message.content.startswith("호호") or message.content.startswith("ㅎㅎ"): 
         dtime = datetime.datetime.now()
@@ -639,9 +654,7 @@ async def on_message(message):
         if randomNum==12:
             await message.channel.send(embed=discord.Embed(title="웃음은 늘 지니고 있어야 합니다. ", color=0xff0000)) 
         if randomNum==13:
-            await message.channel.send(embed=discord.Embed(title="웃음은 가장 값싸고 효과 있는 만병통치약이에요. 웃음의 위력은 대단하죠.", color=0xff0000)) 
-          
-
+            await message.channel.send(embed=discord.Embed(title="웃음은 가장 값싸고 효과 있는 만병통치약이에요. 웃음의 위력은 대단하죠.", color=0xff0000))          
 
     if message.content.startswith('=오늘의음식'):       
         dtime = datetime.datetime.now()
@@ -706,8 +719,7 @@ async def on_message(message):
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="오늘은 게임해도 좋습니다. 최고의 피지컬을 뽐내보세요.", color=0x00ff00))
         if randomNum==2:
-            await message.channel.send(embed=discord.Embed(title="오늘은 게임하면 후회하실겁니다. 컨디션 최악으로 보입니다만.. 그래도 돌리시겠다면 어쩔수 없죠.", color=0x00ff00))
-          
+            await message.channel.send(embed=discord.Embed(title="오늘은 게임하면 후회하실겁니다. 컨디션 최악으로 보입니다만.. 그래도 돌리시겠다면 어쩔수 없죠.", color=0x00ff00))          
           
     if "섹스" in message.content:
         await message.delete()
@@ -944,6 +956,18 @@ async def on_message(message):
     if "꺼1져" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.") 
+       
+    if "아가리" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님이 금칙어를 사용하였습니다.")    
+       
+    if "노무" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.")  
+       
+    if "노1무" in message.content:
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} 님, 일,베 또는 디,시와 같은 남초 커뮤니티에서 파생된 단어를 사용하지 마세요.")         
        
     if "꺼지" in message.content:
         await message.delete()
@@ -1384,6 +1408,355 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="[사람들과] 대화를 많이 합시다. 물론 오프라인으로요. ", color=0xff0000)) 
         if randomNum==13:
             await message.channel.send(embed=discord.Embed(title="[게임]말고 새로운 취미는 없나요? 우리 함께 새로운 취미를 탐색해볼까요?", color=0xff0000))
+          
+    if message.content.startswith("=오늘의시한편"):       
+        randomNum = random.randrange(1, 15)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="=TP01", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="=TP03", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="=TP05", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="=TP07", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="=TP09", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="=TP11", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="=TP13", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="=TP02", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="=TP04", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="=TP06", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="=TP08", color=0x00ff00))
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="=TP10", color=0x00ff00))
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="=TP12", color=0x00ff00))
+        if randomNum==14:
+            await message.channel.send(embed=discord.Embed(title="=TP14", color=0x00ff00))
+
+#2021.5.5 ?Today's Poetry를 개선하여 훨씬 더 보기 편하도록 변경했습니다.
+    if message.content.startswith("=TP01"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP01",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '방문객', value = '정현종 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '*사람이 온다는 건', value = '실로 어마어마한 일이다.',inline = False)   
+        embed.add_field(name = '그는', value = '=== ',inline = False)   
+        embed.add_field(name = '그의 과거와', value = '=== ',inline = False) 
+        embed.add_field(name = '현재와', value = '=== ',inline = False)   
+        embed.add_field(name = '그리고', value = '=== ',inline = False)   
+        embed.add_field(name = '그의 미래가 함께 오기 때문이다.', value = '한 사람의 일생이 오기 때문이다.',inline = False)   
+        embed.add_field(name = '부서지기 쉬운', value = '=== ',inline = False)   
+        embed.add_field(name = '그래서 부서지기도 했을', value = '=== ',inline = False)    
+        embed.add_field(name = '마음이 오는 것이다 -그 갈피를', value = '=== ',inline = False)   
+        embed.add_field(name = '아마 마음은 더듬어볼 수 있을', value = '=== ',inline = False)     
+        embed.add_field(name = '마음,', value = '=== ',inline = False)  
+        embed.add_field(name = '내 마음이 그런 바람을 흉내낸다면', value = '=== ',inline = False) 
+        embed.add_field(name = '필경 환대가 될 것이다.', value = '=== ',inline = False)              
+        await message.channel.send(channel,embed=embed)
+
+    if message.content.startswith("=TP02"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP02",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '바다', value = '윤동주 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '실어다 뿌리는', value = '바람조차 시원타.',inline = False)   
+        embed.add_field(name = '===', value = '=== ',inline = False)   
+        embed.add_field(name = '솔나무 가지마다 새촘히', value = '고개를 돌리어 뻐들어지고,',inline = False) 
+        embed.add_field(name = '===', value = '=== ',inline = False)   
+        embed.add_field(name = '밀치고', value = '밀치운다. ',inline = False)   
+        embed.add_field(name = '===', value = '===',inline = False)   
+        embed.add_field(name = '이랑을 넘은 물결은', value = '폭포처럼 피어오른다.',inline = False)   
+        embed.add_field(name = '===', value = '=== ',inline = False)    
+        embed.add_field(name = '해변에 아이들이 모인다', value = '찰찰 손을 씻고 구보로,',inline = False)   
+        embed.add_field(name = '바다는 자꾸 설워진다.', value = '갈매기의 노래에 ....',inline = False)     
+        embed.add_field(name = '===', value = '=== ',inline = False)  
+        embed.add_field(name = '돌아다보고 돌아다보고', value = '돌아가는 오늘의 바다여! ',inline = False)           
+        await message.channel.send(channel,embed=embed)
+
+
+    if message.content.startswith("=TP03"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP03",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '흔들리며 피는 꽃', value = '도종환 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '흔들리지 않고 피는 꽃이 어디 있으랴', value = '이 세상 그 어떤 아름다운 꽃들도',inline = False)   
+        embed.add_field(name = '다 흔들리면서 피었나니', value = '=== ',inline = False)   
+        embed.add_field(name = '흔들리면서 줄기를 곧게 세웠나니', value = '흔들리지 않고 가는 사람이 어디 있으랴',inline = False) 
+        embed.add_field(name = '===', value = '=== ',inline = False)   
+        embed.add_field(name = '젖지않고 피는 꽃이 어디 있으랴', value = '이 세상 그 어떤 빛나는 꽃들도 ',inline = False)   
+        embed.add_field(name = '다 젖으며 젖으며 피었나니', value = '바람과 비에 젖으며 꽃잎 따뜻하게 피웠나니',inline = False)   
+        embed.add_field(name = '젖지 않고 가는 삶이 어디 있으랴', value = '===',inline = False)           
+        await message.channel.send(channel,embed=embed)  
+
+
+    if message.content.startswith("=TP04"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP04",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '하늘 냄새', value = '박희순 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '*사람이', value = '하늘처럼',inline = False)   
+        embed.add_field(name = '맑아 보일 때가 있다.', value = '=== ',inline = False)   
+        embed.add_field(name = '그때 나는', value = '그 사람에게서',inline = False) 
+        embed.add_field(name = '하늘 냄새를 맡는다.', value = '=== ',inline = False)             
+        await message.channel.send(channel,embed=embed)  
+
+
+    if message.content.startswith("=TP05"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP05",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '호수', value = '정지용 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '얼굴 하나야', value = '===',inline = False)   
+        embed.add_field(name = '손바닥 둘로', value = '=== ',inline = False)   
+        embed.add_field(name = '푹 가리지만', value = '===',inline = False) 
+        embed.add_field(name = '===', value = '=== ',inline = False)    
+        embed.add_field(name = '보고 싶은 마음', value = '=== ',inline = False)    
+        embed.add_field(name = '호수만 하니', value = '=== ',inline = False)   
+        embed.add_field(name = '눈 감을 수 밖에', value = '=== ',inline = False)           
+        await message.channel.send(channel,embed=embed)                
+
+
+    if message.content.startswith("=TP06"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP06",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '그 꽃', value = '고은 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '내려갈 때 보았네', value = '===',inline = False)   
+        embed.add_field(name = '올라갈 때 못 본 그 꽃', value = '=== ',inline = False)          
+        await message.channel.send(channel,embed=embed) 
+
+
+    if message.content.startswith("=TP07"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP07",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '행복', value = '나태주 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '저녁 때', value = '===',inline = False)   
+        embed.add_field(name = '돌아갈 집이 있다는 것', value = '=== ',inline = False)  
+        embed.add_field(name = '===', value = '=== ',inline = False)    
+        embed.add_field(name = '힘들 때', value = '=== ',inline = False)   
+        embed.add_field(name = '마음 속에 생각나는 사람이 있다는 것', value = '=== ',inline = False)   
+        embed.add_field(name = '===', value = '=== ',inline = False)  
+        embed.add_field(name = '외로울 때', value = '=== ',inline = False) 
+        embed.add_field(name = '혼자서 부를 노래가 있다는 것', value = '=== ',inline = False) 
+        await message.channel.send(channel,embed=embed) 
+
+
+    if message.content.startswith("=TP08"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP08",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '풀꽃', value = '나태주 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '자세히 보아야', value = '예쁘다',inline = False)   
+        embed.add_field(name = '===', value = '=== ',inline = False)  
+        embed.add_field(name = '오래보아야', value = '사랑스럽다 ',inline = False)    
+        embed.add_field(name = '===', value = '=== ',inline = False)   
+        embed.add_field(name = '너도 그렇다', value = '=== ',inline = False)   
+        await message.channel.send(channel,embed=embed)   
+
+
+    if message.content.startswith("=TP09"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP09",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '너 외롭구나', value = '김형태 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '깊이', value = '===',inline = False)   
+        embed.add_field(name = '===', value = '=== ',inline = False)  
+        embed.add_field(name = '앓으십시요', value = '=== ',inline = False)    
+        embed.add_field(name = '앓음답도록', value = '=== ',inline = False)   
+        embed.add_field(name = '아름답도록', value = '=== ',inline = False)   
+        await message.channel.send(channel,embed=embed)   
+
+
+    if message.content.startswith("=TP10"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP10",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '가을', value = '한민복 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '그대 생각을', value = '===',inline = False)   
+        embed.add_field(name = '켜 놓은 채', value = '=== ',inline = False)  
+        embed.add_field(name = '잠이 들었습니다', value = '=== ',inline = False)    
+        await message.channel.send(channel,embed=embed)  
+
+
+    if message.content.startswith("=TP11"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP11",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '엄마야 누나야', value = '김소월 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '*엄마야 누나야 강변 살자', value = '===',inline = False)   
+        embed.add_field(name = '뜰에는 반짝이는 금모래 빛', value = '=== ',inline = False)  
+        embed.add_field(name = '뒷문 밖에는 갈잎의 노래', value = '=== ',inline = False)
+        embed.add_field(name = '*엄마야 누나야 강변 살자', value = '=== ',inline = False)    
+        await message.channel.send(channel,embed=embed)      
+
+
+    if message.content.startswith("=TP12"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP12",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '꽃', value = '김춘수 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '내가 그의 이름을 불러 주기 전에는', value = '===',inline = False)   
+        embed.add_field(name = '그는 다만', value = '=== ',inline = False)  
+        embed.add_field(name = '하나의 몸짓에 지나지 않았다.', value = '=== ',inline = False)
+        embed.add_field(name = '===', value = '=== ',inline = False) 
+        embed.add_field(name = '내가 그의 이름을 불러 주었을 때', value = '=== ',inline = False) 
+        embed.add_field(name = '그는 나에게로 와서', value = '=== ',inline = False) 
+        embed.add_field(name = '꽃이 되었다.', value = '=== ',inline = False)  
+        embed.add_field(name = '===', value = '=== ',inline = False) 
+        embed.add_field(name = '내가 그의 이름을 불러 준 것처럼', value = '=== ',inline = False)  
+        embed.add_field(name = '나의 이 빛깔과 향기에 알맞는', value = '=== ',inline = False)  
+        embed.add_field(name = '누가 나의 이름을 불러다오.', value = '=== ',inline = False)
+        embed.add_field(name = '그에게로 가서 나도 그의 꽃이 되고 싶다.', value = '=== ',inline = False)
+        embed.add_field(name = '===', value = '=== ',inline = False) 
+        embed.add_field(name = '우리들은 모두', value = '=== ',inline = False)  
+        embed.add_field(name = '무엇이 되고 싶다.', value = '=== ',inline = False)  
+        embed.add_field(name = '너는 나에게 나는 너에게', value = '=== ',inline = False) 
+        embed.add_field(name = '잊혀지지 않는 하나의 눈짓이 되고 싶다.', value = '=== ',inline = False) 
+        await message.channel.send(channel,embed=embed)                  
+
+ 
+    if message.content.startswith("=TP13"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP13",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '서시', value = '윤동주 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '*죽는 날까지 하늘을 우러러', value = '===',inline = False)   
+        embed.add_field(name = '한 점 부끄럼 없기를', value = '=== ',inline = False)  
+        embed.add_field(name = '잎새에 이는 바람에도', value = '=== ',inline = False)
+        embed.add_field(name = '나는 괴로워했다.', value = '=== ',inline = False) 
+        embed.add_field(name = '===', value = '=== ',inline = False) 
+        embed.add_field(name = '별을 노래하는 마음으로', value = '=== ',inline = False) 
+        embed.add_field(name = '모든 죽어가는 것들을 사랑해야지', value = '=== ',inline = False)  
+        embed.add_field(name = '그리고 나에게 주어진 길을 걸어가야겠다.', value = '=== ',inline = False) 
+        embed.add_field(name = '===', value = '=== ',inline = False)  
+        embed.add_field(name = '오늘 밤에도 별이 바람에 스치운다.', value = '=== ',inline = False)  
+        await message.channel.send(channel,embed=embed)  
+
+
+    if message.content.startswith("=TP14"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "= + TP14",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '토닥토닥', value = '김재진 시인',inline = False)    
+        embed.add_field(name = '=== ', value = '=== ',inline = False)   
+        embed.add_field(name = '*나는 너를 토닥거리고', value = '===',inline = False)   
+        embed.add_field(name = '너는 나를 토닥거린다.', value = '=== ',inline = False)  
+        embed.add_field(name = '삶이 자꾸 아프다고 말하고', value = '=== ',inline = False)
+        embed.add_field(name = '너는 자꾸 괜찮다고 말한다.', value = '=== ',inline = False) 
+        embed.add_field(name = '바람이 불어도 괜찮다.', value = '=== ',inline = False) 
+        embed.add_field(name = '혼자 있어도 괜찮다.', value = '=== ',inline = False) 
+        embed.add_field(name = '너는 자꾸 토닥거린다.', value = '=== ',inline = False)  
+        embed.add_field(name = '나도 자꾸 토닥거린다.', value = '=== ',inline = False) 
+        embed.add_field(name = '===', value = '=== ',inline = False)  
+        embed.add_field(name = '다 지나간다고', value = '=== ',inline = False)  
+        embed.add_field(name = '다 지나갈거라고', value = '=== ',inline = False) 
+        embed.add_field(name = '토닥거리다가 잠든다.', value = '=== ',inline = False) 
+        await message.channel.send(channel,embed=embed)            
           
                             
 accross_token = os.environ["BOT_TOKEN"]
